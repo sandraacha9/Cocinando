@@ -41,7 +41,7 @@ Abrimos un cmd y nos movemos a la carpeta.
 ![alt text](doc/img/2.png)
 ![alt text](doc/img/3.png)
 
-Clonamos el repositorio ejecutando el comando de git con `git clone https://a13sandraan@bitbucket.org/agrasar/pfc-sandraacha-cocinando.git`
+Clonamos el repositorio ejecutando el comando de git con `git clone https://github.com/sandraacha9/Cocinando.git`
 
 ![alt text](doc/img/4.png)
 ![alt text](doc/img/5.png)
