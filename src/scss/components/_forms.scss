@@ -1,0 +1,156 @@
+.elementForm {
+  //width: 100%;
+  border-bottom: 1px solid $color_k1 !important;
+  padding: 15px 0 5px 0;
+  &.has-focus {
+    border-bottom: 1px solid #3a0101 !important;
+  }
+  &.is-invalid.is-touched:not(.has-focus) {
+    border-bottom: 1px solid $color_r !important;
+    .input-group-addon {
+      &:first-child {
+        color: $color_r;
+      }
+    }
+    .form-control {
+      color: $color_r;
+    }
+  }
+
+@mixin noIconHide() {
+  .app-input-icon-hide {
+    display: none;
+  }
+}
+
+  &:not(.is-touched) {
+    .app-input-icon-clear,
+    .app-input-icon-valid,
+    .app-input-icon-invalid {
+      display: none;
+    }
+  }
+
+  &.is-touched {
+    &.has-focus {
+      .app-input-icon-valid,
+      .app-input-icon-invalid {
+        display: none;
+      }
+      @include noIconHide();
+    }
+
+    &:not(.has-focus) {
+      &.is-invalid {
+        .app-input-icon-clear,
+        .app-input-icon-valid {
+          display: none;
+        }
+        @include noIconHide();
+      }
+      &:not(.is-invalid) {
+        .app-input-icon-clear,
+        .app-input-icon-invalid {
+          display: none;
+        }
+        @include noIconHide();
+      }
+    }
+  }
+
+  .input-group-addon {
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    &.app-input-icon-invalid {
+      color: $color_r;
+    }
+    &.app-input-icon-clear {
+      color: $color_k1;
+    }
+    &.app-input-icon-valid {
+      color: $color_g;
+    }
+
+    &:first-child {
+      min-width: 150px;
+      text-align: left;
+    }
+  }
+
+  .input-group-addon-glued-left {
+    padding-right: 0;
+    & + .form-control {
+      padding-left: 0;
+    }
+  }
+
+  label {
+    // width: 15%;
+  }
+  .form-control {
+    border: 0px solid transparent !important;
+    box-shadow: none;
+    &:focus {
+      box-shadow: none;
+    }
+    &[disabled] {
+      background-color: transparent;
+    }
+
+    // width: 84%;
+    // padding: 12px 20px;
+    // margin: 8px 0;
+    // display: inline-block;
+  }
+}
+
+.checkConditions {
+  display: flex;
+  margin-top: 25px;
+  .input-checkConditions{
+    margin-right: 5px;
+  }
+}
+.label-checkConditions{
+  font-weight: normal;
+}
+
+@media #{$widthXS} {
+  .elementForm {
+    .form-control {
+      font-size: 1.143rem;
+    }
+  }
+}
+
+
+@media #{$widthXS}, #{$widthSM} {
+  .elementForm .input-group-addon.app-form-label {
+    display: none;
+  }
+
+
+  .app-form-buttons {
+    & > * {
+      width: 100%;
+    }
+    button {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media #{$widthMD}, #{$widthLG} {
+  .elementForm .input-group-addon.app-form-label {
+    min-width: 190px;
+  }
+
+  .app-form-buttons {
+    .btn {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}

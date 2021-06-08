@@ -1,0 +1,51 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+
+.app-sidebar {
+  .app-logo {
+    display: block;
+    margin: 0 auto 40px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    .app-logo-image {
+      width: 100%;
+    }
+  }
+  .line-separator {
+    width: 100%;
+    display: flex;
+    .line {
+      width: 10px;
+      margin-left: 20px;
+      margin-top: 0;
+      margin-bottom: 0;
+      border-top: 1px solid $color_k;
+    }
+  }
+  .app-sidebar-child {
+    .app-language-button-modal {
+      color: $color_gr !important;
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-sidebar {
+    padding: 5px 0 0 0;
+  }
+  .app-main-header-phone {
+    .app-main-header-row {
+      .between {
+        width: 50%;
+        padding-left: 1px;
+        padding-right: 1px;
+      }
+    }
+  }
+}
+
+@media #{$widthMD}, #{$widthLG} {
+  .app-sidebar {
+    padding: 25px 0 25px 0;
+  }
+}

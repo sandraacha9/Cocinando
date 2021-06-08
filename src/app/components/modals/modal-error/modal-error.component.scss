@@ -1,0 +1,40 @@
+@import "src/scss/components/_buttons.scss";
+@import "src/scss/custom_bootstrap.scss";
+
+.modal-header {
+  margin: -20px -20px 0;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+}
+
+.modal-header .app-icon-alert {
+  color: #ffa9de;
+  top: 3px;
+  margin-right: 10px;
+}
+
+.modal-header span {
+  color: white;
+  font-size: 1.5714rem;
+  margin: 10px 0;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -20%);
+  left: 4px;
+}
+
+.modal-body p {
+  padding-bottom: 17px;
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  :host {
+    .modal-header {
+      margin: -10px -10px 0;
+    }
+    .modal-body p {
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+  }
+}

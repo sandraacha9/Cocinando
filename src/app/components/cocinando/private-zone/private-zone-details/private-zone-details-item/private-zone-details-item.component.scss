@@ -1,0 +1,57 @@
+@import 'src/scss/custom_bootstrap.scss';
+
+:host {
+  display: block;
+}
+
+.app-private-zone-details-item-product-content {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .app-private-zone-details-item-product-image {
+    img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: auto;
+    }
+  }
+  .app-private-zone-details-item-product-title {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.2857rem;
+    padding-left: 20px;
+  }
+  .private-zone-details-item-quantity {
+    text-align: center;
+    .quantity {
+      padding-left: 2px;
+      padding-right: 2px;
+      min-width: 20px;
+      display: inline-block;
+    }
+  }
+  .app-private-zone-details-item-product-total {
+    text-align: center;
+    font-size: 1.2857rem;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-private-zone-details-item-product-content {
+    .app-private-zone-details-item-product-title {
+      font-size: 0.7rem;
+    }
+    .app-private-zone-details-item-product-total {
+      font-size: 0.7rem;
+    }
+
+    .app-private-zone-details-item-product-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

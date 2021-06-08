@@ -1,0 +1,149 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+/*
+#BASICO
+.app-btn
+
+#COLORES
+.app-btn-primary
+.app-btn-secundary
+.app-btn-section
+.app.btn-order
+
+#ICONOS
+.app-btn-has-icon-left
+.app-btn-has-icon-right
+
+#ANCHO COMPOLETO
+.app-btn-wide
+*/
+
+.btn {
+  &.app-btn-simple {
+    padding: 0;
+  }
+
+  &.app-btn {
+    border-radius: 25px;
+    padding: 5px 15px;
+    height: 45px;
+    font-size: 1rem;
+
+    font-weight: normal;
+
+    color: $color_w;
+
+    &.app-btn-primary {
+      text-transform: uppercase;
+      background-color: $color_b;
+      &:hover:not([disabled]) {
+        background-color: $color_b1;
+        &:active {
+          background-color: $color_b3;
+        }
+      }
+    }
+
+    &.app-btn-secundary {
+      text-transform: uppercase;
+      background-color: $color_r;
+      &:hover:not([disabled]) {
+        background-color: $color_r2;
+        &:active {
+          background-color: $color_r1;
+        }
+      }
+    }
+
+    &.app-btn-section {
+      background-color: $color_w;
+      border: 1px solid $color_gr;
+      color: $color_gr;
+      &:hover {
+        background-color: $color_gr1;
+        color: $color_w;
+      }
+    }
+
+
+
+    &.app-btn-mini-cart {
+      text-transform: uppercase;
+      background-color: transparent;
+      color: $color_b;
+      .app-icon {
+        font-size: 0.7142rem;
+      }
+    }
+
+    &.app-btn-sidebar {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &[disabled] {
+      background-color: $color_k3;
+    }
+
+    &.app-btn-has-icon-left,
+    &.app-btn-has-icon-right {
+      position: relative;
+    }
+
+    &.app-btn-has-icon-left {
+      padding-left: 20px;
+    }
+
+    &.app-btn-has-icon-right {
+      padding-right: 20px;
+    }
+
+    &.app-btn-margin {
+      margin: 10px 0px;
+    }
+
+    &.app-btn-padding {
+      padding: 10px;
+    }
+
+    &.app-btn-link {
+      padding: 10px 15px;
+    }
+  }
+
+  &.app-btn-wide {
+    width: 100%;
+  }
+
+  &.app-btn-transparent {
+    background-color: transparent;
+  }
+}
+
+/* @media #{$widthXS}, #{$widthSM} {
+  .btn {
+    &.app-btn {
+      height: 40px;
+    }
+  }
+} */
+
+@media #{$widthXS} {
+  .btn {
+    &.app-btn-xs-wide {
+      width: 100%;
+    }
+  }
+}
+
+@media #{$widthSM} {
+  .btn {
+    &.app-btn-sm-wide {
+      width: 100%;
+    }
+  }
+}
+
+@mixin app-btn-wide() {
+  width: 100%;
+}

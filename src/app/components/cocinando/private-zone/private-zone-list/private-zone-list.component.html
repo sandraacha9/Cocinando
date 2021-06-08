@@ -1,0 +1,10 @@
+<ul class="nav nav-pills nav-stacked app-nav-sidebar app-private-zone-list-content">
+  <li *ngFor="let order of orderList" class="app-nav-sidebar-item app-private-zone-list-item" [ngClass]="{'active': orderId === order.orderId}"
+    role="presentation">
+    <a class="app-nav-sidebar-item-link app-cursor-icon" (click)="switchOrder(order)">
+      <div class="flex-md-row flex-md-h-start flex-lg-row flex-lg-h-start">
+        {{order.ticket}}
+      </div>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,109 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+
+.app-cart-product-content {
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  // display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .app-cart-product-image {
+    img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: auto;
+    }
+  }
+  .app-cart-product-title {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.2857rem;
+    padding-left: 20px;
+  }
+  .app-cart-product-prices {
+    text-align: center;
+    .app-cart-product-price-normal-not-current {
+      display: none;
+    }
+  }
+  .quantity-actions {
+    text-align: center;
+    .quantity {
+      padding-left: 2px;
+      padding-right: 2px;
+      min-width: 20px;
+      display: inline-block;
+    }
+    .quantity-less,
+    .quantity-more {
+      position: relative;
+      top: 2px;
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .quantity-more {
+      &:hover {
+        text-decoration: none;
+        color: $color_b3;
+      }
+    }
+    .quantity-less {
+      &:not(.disabled){
+        &:hover {
+          text-decoration: none;
+          color: $color_b3;
+        }
+      }
+      &.disabled{
+        text-decoration: none;
+        color: $color_k2;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .app-cart-product-amount {
+    text-align: center;
+    font-size: 1.2857rem;
+  }
+  .app-cart-product-delete {
+    text-align: center;
+    &:hover {
+      color: $color_k1;
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-cart-product-content {
+    .app-cart-product-title {
+      font-size: 0.7rem;
+      .title {
+        font-weight: bold;
+      }
+      .app-cart-product-prices {
+        font-size: 0.56rem;;
+      }
+    }
+    .app-cart-product-amount {
+      font-size: 0.7rem;
+    }
+
+    .app-cart-product-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media #{$widthXS} {
+  .quantity-actions {
+    font-size: 0.6rem;
+  }
+}

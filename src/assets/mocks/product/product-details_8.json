@@ -1,0 +1,24 @@
+{
+  "productId": 8,
+  "title": "AGUACATE",
+  "description": "Mezcla de lechugas, tomate, aguacate, queso fresco, aceitunas negras, piñones, aceite de oliva y vinagre balsámico de Módena",
+  "price": 8.70,
+  "url": "./assets/images/aguacate.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 2
+}

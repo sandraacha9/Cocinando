@@ -1,0 +1,80 @@
+<div class="app-cart">
+  <div class="app-cart-header app-cart-header-upper hidden-xs hidden-sm">
+    <span class="color-k">{{'cart.title'| translate}}</span>
+  </div>
+  <div class="container">
+    <div class="app-cart-content" *ngIf="orderCart">
+      <div class="app-cart-sections app-cart-sections-upper color-k2 hidden-xs hidden-sm" *ngIf="orderCart && orderCart.orderItems != null && orderCart.orderItems.length > 0">
+        <div class="row">
+            <div class="app-cart-section col-xs-2 col-sm-2 col-md-2 col-lg-2 color-k text-uppercase">{{'cart.product'| translate}}</div>
+            <div class="app-cart-section app-cart-section-descripton col-xs-7 col-sm-7 col-md-3 col-lg-3 color-k text-uppercase">{{'cart.description'| translate}}</div>
+            <div class="app-cart-section col-md-2 col-lg-2 color-k text-uppercase hidden-xs hidden-sm">{{'cart.priceUnit'| translate}}</div>
+            <div class="app-cart-section col-md-1 col-lg-1 color-k text-uppercase hidden-xs hidden-sm">{{'cart.quantity'| translate}}</div>
+            <div class="app-cart-section col-xs-2 col-sm-2 col-md-3 col-lg-3 color-k text-uppercase">{{'cart.price'| translate}}</div>
+            <div class="app-cart-section col-xs-1 col-sm-1 col-md-1 col-lg-1 color-k text-uppercase hidden-xs hidden-sm">{{'cart.delete'| translate}}</div>
+        </div>
+      </div>
+
+      <div class="app-cart-products" *ngIf="orderCart && orderCart.orderItems != null && orderCart.orderItems.length > 0">
+        <div class="app-cart-product" *ngFor="let orderItem of orderCart.orderItems">
+          <app-cart-item [orderItem]="orderItem"></app-cart-item>
+        </div>
+      </div>
+
+      <div class="app-cart-sections app-cart-sections-lower color-k2 hidden-md hidden-lg" *ngIf="orderCart && orderCart.orderItems != null && orderCart.orderItems.length > 0">
+        <div class="row">
+            <div class="app-cart-section col-xs-2 col-sm-2 col-md-2 col-lg-2 color-k text-uppercase">{{'cart.product'| translate}}</div>
+            <div class="app-cart-section app-cart-section-descripton col-xs-7 col-sm-7 col-md-3 col-lg-3 color-k text-uppercase">{{'cart.description'| translate}}</div>
+            <div class="app-cart-section col-xs-2 col-sm-2 col-md-3 col-lg-3 color-k text-uppercase">{{'cart.price'| translate}}</div>
+            <div class="app-cart-section col-xs-1 col-sm-1 col-md-1 col-lg-1 color-k text-uppercase">
+              <span class="app-icon app-icon-trash"></span>
+            </div>
+        </div>
+      </div>
+
+      <div class="app-cart-footer-container position-xs-fixed position-xs-bottom position-sm-fixed position-sm-bottom">
+        <div *ngIf="orderCart != null && totalProducts > 0" class="app-cart-footer flex-md-row flex-md-h-between flex-md-v-center">
+          <div class="app-cart-total-amount flex-xs-row flex-xs-h-center flex-xs-v-center flex-sm-row flex-sm-h-center flex-sm-v-center flex-md-row flex-md-h-end flex-md-v-center">
+            <span class="color-k text-uppercase"> {{'cart.total'| translate}}</span>
+            <span class="app-cart-total-amount-price color-k">
+              <strong>
+                  {{orderCart.total}} €
+              </strong>
+            </span>
+          </div>
+          <div class="app-cart-link-checkConditions">
+            <form [formGroup]="cartForm" #formDir="ngForm">
+              <!-- BEGIN - Input checkConditions Element -->
+              <input class="app-cursor-icon app-cart-check-conditions app-checkbox" type="checkbox" [(ngModel)]="checkConditions" formControlName="checkConditions" id="checkConditionsCart">
+              <label class="label-checkConditions">{{'cart.checkConditionsText' | translate}}
+                <a target="_blank" href="./legal-info#protection"> {{'cart.checkConditionsShopLink' | translate}}</a>
+              </label>
+              <!-- END -Input checkConditions Element -->
+            </form>
+          </div>
+        </div>
+        <div class="app-cart-buttons">
+          <div class="flex-xs-col flex-sm-col flex-md-row flex-md-h-between flex-lg-row flex-lg-h-between">
+            <div class="action-continue-shopping">
+              <button [routerLink]="['/cocinando']" class="btn app-btn app-btn app-btn-primary text-uppercase">
+                <span class="app-icon app-icon-cart pull-left"></span>
+                <span>{{'cart.continueShopping'| translate}}</span>
+              </button>
+            </div>
+            <div *ngIf="totalProducts > 0" class="action-confirm">
+              <button *ngIf="orderCart!=null" class="button-checkConditions btn app-btn app-btn app-btn-primary text-uppercase" [disabled]="!checkConditions || totalProducts === 0"
+                (click)="confirmOrder()">
+                <span class="app-icon app-icon-checkout pull-left"></span>
+                <span>{{'cart.confirm'| translate}}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="app-cart-header app-cart-header-lower hidden-md hidden-lg">
+    <span class="color-k">{{'cart.title'| translate}}</span>
+  </div>
+</div>

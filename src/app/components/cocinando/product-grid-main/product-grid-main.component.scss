@@ -1,0 +1,37 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/custom_bootstrap.scss';
+
+:host {
+  display: block;
+}
+
+.app-product-grid-main-gotop {
+  z-index: 3;
+  transition: all 0.5s;
+
+  position: fixed;
+  right: 50px;
+  bottom: -100px;
+  height: 50px;
+  width: 50px;
+
+  border: 1px solid $color_k3;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(186, 186, 186, 0.3);
+  cursor: pointer;
+
+  &.app-product-grid-main-gotop-visible {
+    bottom: 50px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 10px $color_k1;
+  }
+
+  &:before {
+    color: $color_b;
+    line-height: 48px;
+    font-size: 18.2px;
+  }
+}

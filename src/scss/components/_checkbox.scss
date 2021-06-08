@@ -1,0 +1,25 @@
+@import 'src/scss/custom_bootstrap.scss';
+
+.app-checkbox {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  background-color: $color_w;
+  border: 2px solid $color_k2;
+  &:hover {
+    border: 2px solid $color_b;
+  }
+  &:checked:after {
+    content: '\45';
+    font-family: untitled-font-1;
+    color: black;
+    font-size: 0.7rem;
+    left: 0.5px;
+    top: -0.2em;
+    position: relative;
+  }
+}

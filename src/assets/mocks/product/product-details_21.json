@@ -1,0 +1,24 @@
+{
+  "productId": 21,
+  "title": "COPA DE CHOCOLATE Y FRUTOS SECOS",
+  "description": "Helado de chocolate, nueces, almendras, sirope de chocolate, nata y barquillos",
+  "price": 4.00,
+  "url": "./assets/images/copachocolate.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 5
+}

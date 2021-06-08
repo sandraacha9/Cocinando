@@ -1,0 +1,101 @@
+{
+    "general": {
+        "title": "Cocinando",
+        "cancel": "Cancelar",
+        "close": "Cerrar",
+        "acept": "Aceptar"
+    },
+    "login": {
+        "ticket":"Ticket",
+        "placeholderTicket": "Numero de Ticket",
+        "login":"Login",
+        "public":"Ver Carta",
+        "private":"Privado",
+        "privateHeader": "Acceso Privado",
+        "privateMessage": "Acceso solo para usuarios autorizados y personal",
+        "user": "Usuario",
+        "placeholderUser": "Nombre de Usuario",
+        "pass": "Contraseña",
+        "placeholderPass": "Contraseña",
+        "privateSuccessModalMessage": "Acceso Autorizado"
+    },
+    "validations": {
+        "initRequired": "El campo ",
+        "initInvalid": "El formato del campo ",
+        "required": " es obligatorio",
+        "invalid": " es incorrecto",
+        "invalidPass": " debe contener minimo 8 caracteres, un simbolo, un numero y alguna mayuscula"
+    },
+    "header": {
+        "logOut": "Salir"
+    },
+    "footer": {
+        "copyright": "COCINANDO",
+        "address":
+          "Rúa de San Clemente, s/n, 15705 Santiago de Compostela, A Coruña",
+        "mail": "a13sandraaan@iessanclemente.net"
+    },
+    "languages": {
+        "es": {
+          "iso": "ES",
+          "description": "Español"
+        },
+        "en": {
+          "iso": "EN",
+          "description": "Inglés"
+        }
+    },
+    "productDetail": {
+        "back": "Atras",
+        "quantity": "Cantidad",
+        "add": "Añadir"
+    },
+    "cart": {
+        "gotoCart": "Ir al carrito",
+        "title": "Carrito",
+        "product": "Producto",
+        "description": "Descripción",
+        "quantity": "Cantidad",
+        "priceUnit": "Precio Unidad",
+        "price": "Precio",
+        "delete": "Borrar",
+        "total": "Total",
+        "continueShopping": "Continuar Comprando",
+        "confirm": "Confirmar",
+        "checkConditionsText": "Es necesario aceptar la",
+        "checkConditionsShopLink": "información legal",
+        "modalActionSuccessConfirm": "Tu pedido se ha confirmado correctamente",
+        "noOrderSelected": "No has seleccionado ningún pedido para ver su detalle"
+    },
+    "404": {
+        "title": "404 Error. Dirección no encontrada.",
+        "message": "La página solicitada no existe.",
+        "button": "ir a la página principal"
+    },
+    "infoLegal": {
+        "legalPanel": {
+            "message1": "Para gestionar correctamente Cocinando utilizamos",
+            "textLink": " cookies",
+            "message2": ", y nos obligan a molestarte con este mensaje. Para aceptar las cookies, basta con que des a aceptar, si continuas navegando las estaras aceptando automaticamente",
+            "acceptButton": "Aceptar"
+        },
+        "legalInfo": {
+            "header": "Información Legal",
+            "sections": {
+                "protection": {
+                    "title": "Protección de Datos",
+                    "message": "A los efectos de lo previsto en la RGPD, del 25 de Mayo de 2018, Reglamento General de Protección de Datos, le avisamos y solicitar su aceptación de los mismos. Todos los datos de carácter personal solicitados como consecuencia de su relación con nosotros, así como aquellos que se originen o nos comunique en el futuro, serán protegidos e incluidos en nuestras bases de datos y tratados por Sandra Acha Nine como responsable de la web.",
+                    "message2": "La finalidad de pedirle sus datos es gestionar los mismos para que pueda hacer uso de la web donde le ofrecemos productos y servicios, con fines económicos, cuya información y precios están a su disposición y pueden ser solicitados, su legitimación se realiza solo a través de su propio consentimiento, sin el consentimiento en las secciones donde se le solicite, no se le permitirá continuar con el proceso correspondiente.",
+                    "message3": "El consentimiento otorgado para el tratamiento de los datos podrá ser revocado por su parte en cualquier momento, cuando legalmente proceda, si bien dicha revocación no tendrá efectos retroactivos. También se le informa que podrá ejercitar sus derechos de acceso, rectificación, cancelación y oposición de los mismos, dirigiendo una solicitud por escrito a Cocinando con NIF R7596042G, Rúa de San Clemente, s/n, 15705 Santiago de Compostela, A Coruña o a través de la dirección de correo electrónico ",
+                    "link-email": "a13sandraaan@iessanclemente.net",
+                    "message4": "Todas las obligaciones de confidencialidad referidas a los datos anteriores y cualquier otra que, aun no estando declarada anteriormente, sea razonable exigible con arreglo a la buena fe o esté prevista en la legislación vigente en cada momento, permanecerán en vigor durante toda la relación y con posterioridad a la finalización de la misma."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "message": "Según lo descrito en la AGPD, Agencia Española de Protección de Datos, se le notifica la Política de Cookies de la web que deberá aceptar, si continua navegando en la misma se considerarán aceptadas.",
+                    "message2": "Estas serán propias y de terceros y se utilizarán para mejorar la experiencia del usuario y nuestra web analizando la navegación con fines estadísticos, de mejorar la web e identificar la sesión y los accesos a las diferentes secciones de la web, algunas públicas y otras con accesos restringidos."
+                }
+            }
+        }
+    }
+}

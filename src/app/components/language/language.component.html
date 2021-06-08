@@ -1,0 +1,16 @@
+<div class="btn-group app-selector app-language-button app-language-button-dropdown hidden-xs hidden-sm" dropdown>
+  <button dropdownToggle type="button" class="btn dropdown-toggle">
+    <span class="app-icon app-icon-language"></span> {{ 'languages.'+currentLang+'.iso' | translate}}
+    <span class="app-icon big-icon horizontal app-selector-icon-down app-icon-arrow-down"></span>
+    <span class="app-icon big-icon horizontal app-selector-icon-up app-icon-arrow-up"></span>
+  </button>
+  <ul *dropdownMenu class="dropdown-menu dropdown-menu-right app-selector-list" role="menu">
+    <app-language-list class="component-language-list" [currentLang]="currentLang"></app-language-list>
+  </ul>
+</div>
+
+<button type="button" class="btn app-language-button app-language-button-modal hidden-md hidden-lg" (click)="openLanguage()">
+  <span class="app-icon app-icon-language pull-left"></span>
+  <span class="pull-left">&nbsp;{{ 'languages.'+currentLang+'.iso' | translate}}</span>
+  <span class="app-icon big-icon horizontal app-icon-arrow-down pull-right"></span>
+</button>

@@ -1,0 +1,9 @@
+<li role="presentation" class="item">
+  <a (click)="selectLink()" href="./legal-info#legal-info">{{'infoLegal.legalInfo.header'| translate}}</a>
+</li>
+<li role="presentation" class="item sub-item" [ngClass]="{'item-active': fragmentIs('protection')}">
+  <a (click)="selectLink()" href="./legal-info#protection">{{'infoLegal.legalInfo.sections.protection.title'| translate}}</a>
+</li>
+<li role="presentation" class="item sub-item" [ngClass]="{'item-active': fragmentIs('cookies')}">
+  <a (click)="selectLink()" href="./legal-info#cookies">{{'infoLegal.legalInfo.sections.cookies.title'| translate}}</a>
+</li>

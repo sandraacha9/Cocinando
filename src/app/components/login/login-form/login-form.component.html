@@ -1,0 +1,54 @@
+<div id="form-login" class="app-login-form-content">
+  <div class="logo-block  hidden-xs hidden-sm">
+    <img #logo tabIndex="0" class="logo hidden-xs" src='./assets/images/Logo.png' />
+  </div>
+  <form [formGroup]="loginForm" #formDir="ngForm">
+    <div class="form-group">
+      <!-- BEGIN - Input ticket Element -->
+      <div class="input-group elementForm" [ngClass]="statusClasses(ticket,'ticket')">
+        <input #inputTicket class="form-control app-login-form-ticket" [(ngModel)]="login.ticket" type="text" name="ticket" formControlName="ticket"
+          appCustomPlaceholder customPlaceholder="{{'login.ticket' | translate | limpiarAcentos}}" (focus)="inputFocus($event)"
+          (blur)="inputBlur($event)" (keyup.enter)="releaseFocus(ticket)" (keyup)="updateAutofilled(0)" (change)="updateAutofilled(0)"
+          tabindex="{{noFocusTabIndex()}}" [value]="inputTicket.value.toUpperCase()">
+
+        <!-- input icons -->
+        <span class="input-group-addon app-input-icon-invalid app-cursor-icon" (click)="clearInput(ticket)">
+          <span class="app-icon app-icon-x"></span>
+        </span>
+        <span class="input-group-addon app-input-icon-clear app-cursor-icon" (click)="clearInput(ticket)">
+          <span class="app-icon app-icon-x"></span>
+        </span>
+        <span class="input-group-addon app-input-icon-valid">
+          <span class="app-icon app-icon-check"></span>
+        </span>
+        <span class="input-group-addon app-input-icon-hide">
+          <span class="app-icon app-icon-hidden"></span>
+        </span>
+      </div>
+
+      <div *ngIf="showDivErrors(loginForm) && showMessageError(ticket, 'required', 'ticket')" class="app-alert alert alert-danger">
+        <div>
+          {{ 'validations.initRequired' | translate }}{{ 'login.ticket' | translate }}{{ 'validations.required' | translate }}
+        </div>
+      </div>
+      <div *ngIf="showDivErrors(loginForm) && showMessageError(ticket, 'invalid', 'ticket')" class="app-alert alert alert-danger">
+        <div>
+          {{ 'validations.initInvalid' | translate }}{{ 'login.ticket' | translate }}{{ 'validations.invalid' | translate }}
+        </div>
+      </div>
+      <!-- END -Input ticket Element -->
+    </div>
+
+    <button type="submit" (click)="doLogin()" class="btn app-btn app-btn-primary app-btn-wide" [disabled]="!autofilled && loginForm.invalid"
+      tabindex="{{noFocusTabIndex()}}">{{ 'login.login' | translate }}
+    </button>
+
+    <button type="button" (click)="continueAsPublic()" class="btn app-btn app-btn-section app-btn-wide" tabindex="{{noFocusTabIndex()}}">{{'login.public' | translate}}
+      <span class="app-login-link-icon app-icon-arrow-right"></span>
+    </button>
+
+    <div class="app-login-link text-center">
+      <a (click)="privateLogin()" tabindex="{{noFocusTabIndex()}}">{{'login.private' | translate}}</a>
+    </div>
+  </form>
+</div>

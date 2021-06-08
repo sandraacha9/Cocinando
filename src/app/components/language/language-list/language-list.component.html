@@ -1,0 +1,5 @@
+<li *ngFor="let language of languages" role="menuitem" class="language-item-list app-selector-list-item">
+  <a appHref class="app-selector-list-item-link dropdown-item" (click)="switchLanguage(language)" [ngClass]="{'active': language == currentLang}">
+    {{ 'languages.'+language+'.description' | translate}}
+  </a>
+</li>

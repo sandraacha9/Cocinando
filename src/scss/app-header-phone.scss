@@ -1,0 +1,42 @@
+.app-header-phone {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  .app-navbar-header-phone {
+    background-color: $color_b;
+    width: 100%;
+
+    .navbar-nav {
+      margin: 0;
+      .navbar-item {
+        .navbar-toggle {
+          border: 1px solid $color_w;
+          .icon-bar {
+            background-color: $color_w;
+          }
+        }
+        a {
+          color: $color_w;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        &.navbar-item-logo {
+          position: absolute;
+          top: 4px;
+          left: 5px;
+
+          .app-logo {
+            @include square(50px);
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

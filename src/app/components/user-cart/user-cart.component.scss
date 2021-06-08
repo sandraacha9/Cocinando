@@ -1,0 +1,23 @@
+@import 'src/scss/palette.scss';
+
+:host {
+  display: block;
+  .app-user-cart-button-dropdown {
+    .dropdown-toggle {
+      color: $color_k1;
+      &:hover {
+        .app-icon-cart {
+          font-size: 1em;
+          color: $color_gr;
+        }
+      }
+      .app-icon-cart {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  .app-user-cart-products {
+    min-width: 241px !important
+  }
+}

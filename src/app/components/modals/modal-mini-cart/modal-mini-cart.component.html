@@ -1,0 +1,14 @@
+<div class="app-modal" appBsModalVerticalBottomAlign>
+  <div class="modal-header">
+    <div class="pull-right">
+      <button (click)="closeModal()" class="btn app-btn app-btn-mini-cart">{{'general.close' | translate}}
+        <span class="app-icon app-icon-x-close"></span>
+      </button>
+    </div>
+  </div>
+  <div class="modal-body">
+    <app-mini-cart (switchEvent)="onSwitch()" class="app-modal-mini-cart-list"></app-mini-cart>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>

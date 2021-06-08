@@ -1,0 +1,11 @@
+<div class="app-product-mini-detail-content" (click)="switchProduct()">
+  <div class="app-product-mini-detail-image">
+    <img appImgDefault [src]="product.url" alt="">
+  </div>
+  <div class="app-product-mini-detail-info">
+      <strong><div class="app-product-mini-detail-desc" [innerHtml]="product.title"></div></strong>
+      <div class="app-product-mini-detail-price" *ngIf="product.price !== null && isRegistered()">
+        {{product.price}} €
+      </div>
+  </div>
+</div>

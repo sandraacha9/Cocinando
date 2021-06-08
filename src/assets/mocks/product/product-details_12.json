@@ -1,0 +1,24 @@
+{
+  "productId": 12,
+  "title": "PEPPERONI",
+  "description": "Salsa de tomate, queso mozzarella, pepperoni, beicon ahumado y orégano",
+  "price": 9.70,
+  "url": "./assets/images/pepperoni.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 3
+}

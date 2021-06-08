@@ -1,0 +1,74 @@
+<h5 class="private-selector-message">{{'login.privateMessage' | translate}}</h5>
+<form [formGroup]="privateForm" #formDir="ngForm">
+  <div class="form-group">
+
+    <!-- BEGIN - Input user Element -->
+    <div class="input-group elementForm" [ngClass]="statusClasses(user,'user')">
+      <span class="input-group-addon app-form-label">{{'login.user' | translate}}</span>
+      <input class="form-control" name="user" type="text" [(ngModel)]="private.user" formControlName="user" id="user"
+        placeholder="{{'login.placeholderUser' | translate}}" (focus)="inputFocus($event)" (blur)="inputBlur($event)">
+      <!-- input icons -->
+      <span class="input-group-addon app-input-icon-invalid app-cursor-icon" (click)="clearInput(user)">
+        <span class="app-icon app-icon-x"></span>
+      </span>
+      <span class="input-group-addon app-input-icon-clear app-cursor-icon" (click)="clearInput(user)">
+        <span class="app-icon app-icon-x"></span>
+      </span>
+      <span class="input-group-addon app-input-icon-valid">
+        <span class="app-icon app-icon-check"></span>
+      </span>
+      <span class="input-group-addon app-input-icon-hide">
+        <span class="app-icon app-icon-hidden"></span>
+      </span>
+    </div>
+
+    <div *ngIf="showDivErrors(privateForm) && showMessageError(user, 'required', 'user')" class="app-alert alert alert-danger">
+      <div>
+        {{'validations.initRequired' | translate}} {{'login.user' | translate}} {{'validations.required' | translate}}
+      </div>
+    </div>
+    <div *ngIf="showDivErrors(privateForm) && showMessageError(user, 'invalid', 'user')" class="app-alert alert alert-danger">
+      <div>
+        {{'validations.initInvalid' | translate}} {{'login.user' | translate}} {{'validations.invalid' | translate}}
+      </div>
+    </div>
+    <!-- END -Input user Element -->
+
+    <!-- BEGIN - Input pass Element -->
+    <div class="input-group elementForm" [ngClass]="statusClasses(pass,'pass')">
+      <span class="input-group-addon app-form-label">{{'login.pass' | translate}}</span>
+      <input class="form-control" name="pass" type="password" [(ngModel)]="private.pass" formControlName="pass" id="pass"
+      placeholder="{{'login.placeholderPass' | translate}}" (focus)="inputFocus($event)" (blur)="inputBlur($event)">
+      <!-- input icons -->
+      <span class="input-group-addon app-input-icon-invalid app-cursor-icon" (click)="clearInput(pass)">
+        <span class="app-icon app-icon-x"></span>
+      </span>
+      <span class="input-group-addon app-input-icon-clear app-cursor-icon" (click)="clearInput(pass)">
+        <span class="app-icon app-icon-x"></span>
+      </span>
+      <span class="input-group-addon app-input-icon-valid">
+        <span class="app-icon app-icon-check"></span>
+      </span>
+      <span class="input-group-addon app-input-icon-hide">
+        <span class="app-icon app-icon-hidden"></span>
+      </span>
+    </div>
+
+    <div *ngIf="showDivErrors(privateForm) && showMessageError(pass, 'required', 'pass')" class="app-alert alert alert-danger">
+      <div>
+        {{'validations.initRequired' | translate}} {{'login.pass' | translate}} {{'validations.required' | translate}}
+      </div>
+    </div>
+    <div *ngIf="showDivErrors(privateForm) && showMessageError(pass, 'invalid', 'pass')" class="app-alert alert alert-danger">
+      <div>
+        {{'validations.initInvalid' | translate}} {{'login.pass' | translate}} {{'validations.invalidPass' | translate}}
+      </div>
+    </div>
+    <!-- END -Input pass Element -->
+
+    <div class="app-buttons-section app-form-buttons flex-xs-col flex-xs-v-center flex-xs-h-center flex-sm-col flex-sm-v-center flex-sm-h-center flex-md-row flex-md-h-center flex-lg-row flex-lg-h-center">
+      <div><button class="btn app-btn app-btn-secundary app-btn-xs-wide app-btn-sm-wide" type="button" (click)="cancel()">{{'general.cancel'| translate}}</button></div>
+      <div><button type="submit" class="btn app-btn app-btn-primary app-btn-xs-wide app-btn-sm-wide" (click)="doPrivate()" [disabled]="privateForm.invalid">{{'login.login' | translate}}</button></div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,144 @@
+// @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+
+@mixin sidebarAnimation() {
+  @include transition-property(transform);
+  @include transition-duration(0.2s);
+}
+
+@mixin sidebarFadeOut() {
+  @include translate(-101%, 0);
+}
+
+@mixin sidebarFadeIn() {
+  @include translate(0, 0);
+}
+
+.app-sidebar-backdrop {
+  display: none;
+
+  z-index: 4;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $color_k;
+  opacity: 0.9;
+
+  &.app-sidebar-show {
+    display: block;
+  }
+}
+
+.app-sidebar {
+  @include sidebarAnimation();
+  z-index: 4;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $sidebar_width;
+  background-color: #fcf7f7;
+  position: fixed;
+
+  &.app-sidebar-show {
+    @include sidebarFadeIn();
+  }
+
+  .app-sidebar-main {
+    position: relative;
+    overflow-y: auto;
+
+
+    padding-bottom: 1px;
+  }
+
+  .app-nav-sidebar {
+    .app-nav-sidebar-item {
+      text-transform: uppercase;
+      padding-right: 15px;
+      &.app-nav-sidebar-item-logo {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      &.app-nav-sidebar-item-action {
+        margin-bottom: 15px;
+      }
+
+      &.app-nav-sidebar-item-category {
+        margin-left: 30px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 15px;
+        margin-left: 30px;
+      }
+
+      &.app-nav-sidebar-item-close {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .app-icon {
+          font-size: 0.7142rem;
+        }
+      }
+
+      &.app-nav-sidebar-item-user-area {
+        background-color: $color_b3;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      &.app-nav-sidebar-item-action-logout {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      &.app-nav-sidebar-item-action-language {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .app-nav-sidebar-item-link {
+        padding: 0 0;
+        color: #a3a3a3;
+        text-decoration: regular;
+        background-color: transparent;
+        &:hover {
+          background-color: transparent;
+          color: $color_k;
+        }
+      }
+      &.active {
+        .app-nav-sidebar-item-link {
+          font-weight: bold;
+          color: #3a0101;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-sidebar {
+    .app-nav-sidebar-item {
+      padding-left: 15px;
+    }
+    & {
+      @include sidebarFadeOut();
+    }
+  }
+}
+@media #{$widthXSportrait} {
+  .app-sidebar {
+    width: 75%;
+  }
+}
+@media #{$widthXSlandscape}, #{$widthSM} {
+  .app-sidebar {
+    width: 50%;
+  }
+}

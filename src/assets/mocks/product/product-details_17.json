@@ -1,0 +1,24 @@
+{
+  "productId": 17,
+  "title": "MILHOJAS DE POLLO Y QUESO DE CABRA",
+  "description": "Pechuga de pollo asada al horno con rodajas de tomate natural y queso de cabra, gratinada sobre una base de pisto de verduras y arroz blanco",
+  "price": 11.50,
+  "url": "./assets/images/milhojas.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 4
+}

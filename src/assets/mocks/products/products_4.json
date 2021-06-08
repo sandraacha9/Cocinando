@@ -1,0 +1,25 @@
+{
+  "data": [
+      {
+          "productId": 15,
+          "title": "RISOTTO DE SETAS",
+          "price": 10.95,
+          "url": "./assets/images/risotto.jpg",
+          "category": 4
+      },
+      {
+          "productId": 16,
+          "title": "CANELONES",
+          "price": 10.00,
+          "url": "./assets/images/canelones.jpg",
+          "category": 4
+      },
+      {
+          "productId": 17,
+          "title": "MILHOJAS DE POLLO Y QUESO DE CABRA",
+          "price": 11.50,
+          "url": "./assets/images/milhojas.jpg",
+          "category": 4
+      }
+  ]
+}

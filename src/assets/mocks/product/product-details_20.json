@@ -1,0 +1,24 @@
+{
+  "productId": 20,
+  "title": "COPA DE LIMÓN",
+  "description": "Sorbete de limón, licor limoncello y guinda",
+  "price": 3.50,
+  "url": "./assets/images/copalimon.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 5
+}

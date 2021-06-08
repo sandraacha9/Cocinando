@@ -1,0 +1,90 @@
+@import '../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+@import '../../../../scss/palette.scss';
+
+:host {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  .app-navbar-header-phone {
+    background-color: $color_b;
+    width: 100%;
+
+    .navbar-nav {
+      margin: 0;
+      .navbar-item {
+        .navbar-toggle {
+          border: 0;
+          .icon-bar {
+            background-color: $color_b1;
+          }
+        }
+        &:last-child {
+          padding: 5px 5px 0 0;
+        }
+        a {
+          color: $color_w;
+          background-color: transparent;
+          top: -2px;
+          &:hover {
+            background-color: transparent;
+          }
+          .app-icon-cart {
+            font-size: 1.2857rem;
+            color: $color_b1;
+            top: 2px;
+          }
+          .app-total-products {
+            background-color: transparent;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+           display: inline-block;
+           font-weight: bold;
+           text-align: center;
+           width: 22.40px;
+          }
+          .app-total-products-color {
+            background-color: $color_r;
+          }
+        }
+        &.navbar-item-logo {
+          position: absolute;
+          left: 50%;
+          @include translate(-50%, 0);
+        }
+        &.navbar-item-cart {
+          margin-top: 9px;
+          color: $color_w;
+          background-color: transparent;
+          top: -2px;
+          &:hover {
+            background-color: transparent;
+          }
+          .app-icon-cart {
+            font-size: 1.2857rem;
+            color: $color_b1;
+            top: 2px;
+          }
+          .app-total-products {
+            background-color: transparent;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+           display: inline-block;
+           font-weight: bold;
+           text-align: center;
+           width: 22.40px;
+          }
+          .app-total-products-color {
+            background-color: $color_r;
+          }
+          .anchor-icon-cart {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

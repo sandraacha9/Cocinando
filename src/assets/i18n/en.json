@@ -1,0 +1,101 @@
+{
+    "general": {
+        "title": "Cocinando",
+        "cancel": "Cancel",
+        "close": "Close",
+        "acept": "Acept"
+    },
+    "login": {
+        "ticket":"Ticket",
+        "placeholderTicket": "Ticket Number",
+        "login":"Login",
+        "public":"Show Menu",
+        "private":"Private",
+        "privateHeader": "Private Access",
+        "privateMessage": "Access only for authorized users and staff",
+        "user": "User",
+        "placeholderUser": "Username",
+        "pass": "Password",
+        "placeholderPass": "Password",
+        "privateSuccessModalMessage": "Authorized Access"
+    },
+    "validations": {
+        "initRequired": "The field ",
+        "initInvalid": "The field of the format ",
+        "required": " is compulsory",
+        "invalid": " is incorrect",
+        "invalidPass": " it must contain a minimum of 8 characters, a symbol, a number and some capital"
+    },
+    "header": {
+        "logOut": "Exit"
+    },
+    "footer": {
+        "copyright": "COCINANDO",
+        "address":
+          "Rúa de San Clemente, s/n, 15705 Santiago de Compostela, A Coruña",
+        "mail": "a13sandraaan@iessanclemente.net"
+    },
+    "languages": {
+        "es": {
+          "iso": "ES",
+          "description": "Spanish"
+        },
+        "en": {
+          "iso": "EN",
+          "description": "English"
+        }
+    },
+    "productDetail": {
+        "back": "Back",
+        "quantity": "Quantity",
+        "add": "Add"
+    },
+    "cart": {
+        "gotoCart": "Go to cart",
+        "title": "Cart",
+        "product": "Product",
+        "description": "Description",
+        "quantity": "Quantity",
+        "priceUnit": "Price Unit",
+        "price": "Price",
+        "delete": "Delete",
+        "total": "Total",
+        "continueShopping": "Continue Shopping",
+        "confirm": "Confirm",
+        "checkConditionsText": "You must accept the",
+        "checkConditionsShopLink": "legal information",
+        "modalActionSuccessConfirm": "Your order has been confirmed correctly",
+        "noOrderSelected": "No order has been selected to see its detail"
+    },
+    "404": {
+        "title": "404 Error. The page cannot be found.",
+        "message": "The page requested does not exist.",
+        "button": "Go to home"
+    },
+    "infoLegal": {
+        "legalPanel": {
+            "message1": "To manage properly Cooking we use",
+            "textLink": " cookies",
+            "message2": ", and they force us to bother you with this message. To accept cookies, you just have to accept, if you continue browsing you will automatically accept them",
+            "acceptButton": "Acept"
+        },
+        "legalInfo": {
+            "header": "Legal Info",
+            "sections": {
+                "protection": {
+                    "title": "Data Protection",
+                    "message": "For the purposes of the provisions of the RGPD, of May 25, 2018, General Data Protection Regulations, we notify you and request your acceptance of them. All personal data requested as a result of your relationship with us, as well as those that originate or communicate in the future, will be protected and included in our databases and treated by Sandra Acha Nine as responsible for the web.",
+                    "message2": "The purpose of requesting your data is to manage the same so that you can make use of the web where we offer products and services, for economic purposes, whose information and prices are at your disposal and can be requested, your legitimation is only made through his own consent, without the consent in the sections where requested, will not be allowed to continue with the corresponding process.",
+                    "message3": "The consent granted for the processing of data may be revoked by you at any time, when legally appropriate, although such revocation will not have retroactive effects. You are also informed that you may exercise your rights of access, rectification, cancellation and opposition of the same, by addressing a written request to Cook with NIF R7596042G, Rúa de San Clemente, s / n, 15705 Santiago de Compostela, A Coruña or through of the email address",
+                    "link-email": "a13sandraaan@iessanclemente.net",
+                    "message4": "All the confidentiality obligations referred to the above data and any other that, although not previously stated, is reasonable enforceable in accordance with good faith or is provided for in the legislation in force at any time, will remain in force throughout the relationship and with after the end of it."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "message": "As described in the AGPD, Spanish Agency for Data Protection, you are notified of the Cookies Policy of the website that you must accept, if you continue browsing it will be considered accepted.",
+                    "message2": "These will be owned by third parties and will be used to improve the user experience and our website analyzing navigation for statistical purposes, to improve the website and identify the session and access to the different sections of the web, some public and others with access restricted."
+                }
+            }
+        }
+    }
+}

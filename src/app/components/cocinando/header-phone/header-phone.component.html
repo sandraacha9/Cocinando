@@ -1,0 +1,29 @@
+<div class="app-header-phone">
+  <div class="">
+    <div class="navbar app-navbar-header-phone">
+      <ul class="nav navbar-nav">
+        <li class="navbar-item  pull-left">
+          <button type="button" class="navbar-toggle collapsed" (click)="showSidebar()" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </li>
+        <li class="navbar-item navbar-item-logo">
+          <div class="app-logo">
+            <img #logo tabIndex="0" class="app-logo-image" src='./assets/images/Logo.png' />
+          </div>
+        </li>
+        <li class="navbar-item navbar-item-cart pull-right">
+          <div *ngIf="isRegistered()">
+            <a (click)="totalProducts !== 0 ? showMiniCart():false" class="anchor-icon-cart">
+              <span class="app-icon app-icon-cart"></span>
+              <span [ngClass]="{'app-total-products-color': totalProducts !== 0}" class="app-total-products">{{totalProducts}}</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+
+.app-legal-info {
+  font-size: 0.8571rem;
+  .app-legal-info-copyright {
+    color: $color_gr;
+  }
+  .app-legal-info-address{
+    font-size: 0.7142rem;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-legal-info {
+    text-align: center;
+    font-size: 0.7142rem;
+    .app-legal-info-copyright {
+      font-weight: bold;
+    }
+    .app-legal-info-mail {
+      margin-left: 5px;
+    }
+    .app-legal-info-address{
+      margin: 0;
+    }
+  }
+}
+
+
+@media #{$widthXS} {
+  .app-legal-info {
+    .app-legal-info-copyright {
+    }
+    .app-legal-info-mail {
+    }
+    .app-legal-info-address{
+      font-size: 0.5rem;
+    }
+  }
+}

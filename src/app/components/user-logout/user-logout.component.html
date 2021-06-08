@@ -1,0 +1,14 @@
+<!-- Desktop -->
+<div class="hidden-sm hidden-xs app-user-logout-content">
+  <button type="button" class="btn app-btn-logout" (click)="logOut()">
+    <span class="app-icon app-icon-logout"></span> {{'header.logOut'| translate}}
+  </button>
+</div>
+
+<!-- Mobile -->
+<div class="hidden-lg hidden-md app-sidebar-logout" (click)="logOutSidebar()">
+  <a appHref href="#">
+    <span class="app-icon small-icon app-icon-logout"></span>
+    <span class="area-data">{{'header.logOut'| translate}}</span>
+  </a>
+</div>

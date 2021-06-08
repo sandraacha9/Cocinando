@@ -1,0 +1,53 @@
+@import '../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+
+:host {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .navbar-nav{
+    justify-content: space-between;
+    .navbar-toggle {
+      border: 0;
+      .icon-bar {
+        background-color: $color_b1;
+      }
+    }
+  }
+}
+
+@media (min-width: 435px) and (max-width: $screen-xs-max) {
+  .navbar-path {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .navbar-item-home{
+    a {
+      padding-right: 0;
+      .app-icon-flight {
+        color: $color_b1;
+      }
+    }
+    .navbar-item-info-header {
+      color: $color_b1;
+      &:before  {
+        content: "/\A0";
+        margin-left: 2px;
+        margin-right: 2px;
+        color: $color_b1;
+      }
+    }
+    span, a {
+      display: inline-block;
+    }
+  }
+}

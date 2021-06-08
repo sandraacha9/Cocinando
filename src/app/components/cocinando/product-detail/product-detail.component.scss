@@ -1,0 +1,249 @@
+
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+@import 'src/scss/components/_buttons.scss';
+
+:host {
+  display: block;
+  margin-top: 55px;
+}
+
+.app-product-detail-data-allergens {
+  margin-left: 0;
+  font-size: 2.2rem;
+  .allergens {
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+  }
+}
+
+.app-product-detail-content {
+  .app-product-detail-back {
+    .app-product-detail-back-link {
+      color: $color_gr1;
+      &:hover {
+        text-decoration: none;
+        color: $color_gr;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+      .link-back {
+        font-size: 1.2857rem;
+      }
+    }
+  }
+
+  .app-product-detail-container {
+    .app-product-detail-main {
+      .app-product-detail-image {
+        flex-grow: 0;
+        flex-basis: 55%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .app-product-detail-data {
+        flex-grow: 0;
+        flex-direction: column;
+
+        margin-bottom: 25px;
+
+        .app-product-detail-back-link {
+          font-size: 1.2142rem;
+        }
+
+        .app-product-detail-data-title-price {
+          .app-product-detail-data-title {
+            user-select: text;
+            color: $color_k;
+            margin-bottom: 20px;
+            font-size: 1.7142rem;
+            font-weight: bold;
+          }
+
+          .app-product-detail-data-price {
+            margin-bottom: 40px;
+            font-size: 1.7142rem;
+            .app-product-detail-data-price {
+              color: $color_gr;
+            }
+          }
+        }
+
+        .app-product-detail-data-description {
+          user-select: text;
+          color: $color_k;
+          margin-bottom: 20px;
+          font-size: 1rem;
+        }
+
+        .app-product-detail-data-quantity {
+          margin-top: 20px;
+          margin-bottom: 15px;
+          font-size: 1rem;
+          width: 100%;
+          .app-product-detail-data-quantity-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: $color_k;
+          }
+          .app-product-detail-data-quantity-actions {
+            margin-right: 5px;
+            text-align: center;
+            .app-product-detail-data-quantity-actions-quantity {
+              padding-left: 2px;
+              padding-right: 2px;
+              font-weight: bold;
+              min-width: 30px;
+              display: inline-block;
+            }
+            .app-product-detail-data-quantity-actions-less,
+            .app-product-detail-data-quantity-actions-more {
+              position: relative;
+              top: 2px;
+              color: $color_gr1;
+              &:focus {
+                text-decoration: none;
+              }
+            }
+            .app-product-detail-data-quantity-actions-more {
+              &:hover {
+                text-decoration: none;
+                color: $color_gr;
+              }
+            }
+            .app-product-detail-data-quantity-actions-less {
+              &:not(.disabled){
+                &:hover {
+                  text-decoration: none;
+                  color: $color_gr;
+                }
+              }
+              &.disabled{
+                text-decoration: none;
+                color: $color_k2;
+                cursor: not-allowed;
+              }
+            }
+          }
+        }
+
+        .app-product-detail-data-add-action {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  :host {
+    margin-top: 30px;
+  }
+  .app-product-detail-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    .app-product-detail-container {
+      .app-product-detail-main {
+        .app-product-detail-data {
+          .app-product-detail-back-link {
+            font-size: 0.7142rem;
+            color: $color_gr1;
+          }
+          .app-product-detail-data-title-price {
+            .app-product-detail-data-title {
+              margin-bottom: 5px;
+              font-size: 1rem;
+
+              & > *:first-child {
+                flex-basis: 20px;
+                padding-top: 5px;
+              }
+            }
+            .app-product-detail-data-price {
+              margin-bottom: 5px;
+              text-align: right;
+              .app-product-detail-data-price {
+                font-size: 1.1428rem;
+              }
+            }
+          }
+          .app-product-detail-data-add-action {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS} {
+  .app-product-detail-content {
+    .app-product-detail-container {
+      .app-product-detail-main {
+        .app-product-detail-data {
+          .app-product-detail-data-title-price {
+            .app-product-detail-data-title {
+              flex-basis: 65%;
+            }
+            .app-product-detail-data-price {
+              .app-product-detail-data-price {
+                font-size: 0.8571rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthSM} {
+  .app-product-detail-content {
+    .app-product-detail-container {
+      .app-product-detail-main {
+        .app-product-detail-data {
+          .app-product-detail-data-title-price {
+            .app-product-detail-data-title {
+              flex-basis: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthMD}, #{$widthLG} {
+  .app-product-detail-content {
+    .app-product-detail-back {
+      clear: both;
+    }
+    .app-product-detail-container {
+      .app-product-detail-main {
+        .app-product-detail-data {
+          flex-basis: 50%;
+          .app-product-detail-back-link {
+            display: none;
+          }
+
+          .app-product-detail-data-title-price {
+            .app-product-detail-data-price {
+              .app-product-detail-data-price {
+                margin-right: 5px;
+              }
+            }
+          }
+
+          .app-product-detail-data-add-action {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

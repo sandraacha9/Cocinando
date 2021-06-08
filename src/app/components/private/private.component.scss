@@ -1,0 +1,45 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/components/_buttons.scss';
+
+.app-conditions-section {
+  margin-top: 25px;
+  .app-register-check-conditions {
+    position: relative;
+  }
+  .label-checkConditions {
+    margin-left: 15px;
+  }
+}
+
+.app-buttons-section {
+  margin-top: 15px;
+}
+
+@media #{$widthMD}, #{$widthLG} {
+  .app-register-check-conditions {
+    top: -2px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .register-selector-message {
+    font-size: 0.9285rem;
+  }
+  .app-register-check-conditions,
+  .app-register-check-conditions-label {
+    font-size: 0.9285rem;
+  }
+  .app-register-check-conditions {
+    top: -4px;
+    width: 18px;
+    &:checked:after {
+      top: -1px;
+    }
+  }
+}
+
+@media #{$widthXSlandscape}, #{$widthSMlandscape} {
+  .app-register-check-conditions {
+    width: 15px;
+  }
+}

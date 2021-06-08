@@ -1,0 +1,35 @@
+// https://getbootstrap.com/docs/3.3/customize/
+$font-size-base: 14px;
+// MEDIA QUERIES BREAKPOINTS
+$screen-xs: 320px;
+$screen-xs-min: $screen-xs;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-md: 1024px;
+$screen-md-min: $screen-md;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-phone: $screen-sm-min;
+$screen-tablet: $screen-sm-min;
+$screen-desktop: $screen-md-min;
+$screen-lg-desktop: $screen-lg-min;
+$grid-float-breakpoint: $screen-md-min;
+// GRID SYSTEM
+$grid-gutter-width: 0;
+// CONTAINER SIZES
+$container-tablet: (100% + $grid-gutter-width);
+$container-desktop: (700px + $grid-gutter-width);
+$container-large-desktop: (945px + $grid-gutter-width);
+$widthXS: "(min-width: #{$screen-xs-min}) and (max-width: #{$screen-xs-max})";
+$widthSM: "(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";
+$widthMD: "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
+$widthLG: "(min-width: #{$screen-lg-min})";
+$widthXSExt: "(max-width: 460px)";
+$widthXSlandscape: "#{$widthXS} and (orientation: landscape)";
+$widthXSportrait: "#{$widthXS} and (orientation: portrait)";
+$widthSMlandscape: "#{$widthSM} and (orientation: landscape)";
+$widthSMportrait: "#{$widthSM} and (orientation: portrait)";
+$footerResumeCollapsable: "#{$widthXSlandscape}, #{$widthSMlandscape}";

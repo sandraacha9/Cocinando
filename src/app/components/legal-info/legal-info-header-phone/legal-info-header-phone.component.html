@@ -1,0 +1,29 @@
+<div class="app-header-phone">
+    <div class="">
+      <div class="navbar app-navbar-header-phone">
+        <ul class="nav navbar-nav row flex-xs-row flex-sm-row flex-xs-v-center flex-sm-v-center">
+          <li class="navbar-item navbar-item-button-menu col-xs-3 col-sm-4">
+            <button type="button" class="navbar-toggle collapsed pull-left" (click)="showSidebar()" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </li>
+          <li class="navbar-item navbar-item-home pull-left col-xs-6 col-sm-4">
+            <div class="navbar-path flex-sm-row flex-sm-v-center flex-sm-h-center">
+              <a href="/cocinando/">
+                <span class="app-icon-flight"></span> {{'general.title'| translate}}
+              </a>
+              <span class="navbar-item-info-header">{{title}}</span>
+            </div>
+          </li>
+          <li class="navbar-item navbar-item-language col-xs-3 col-sm-4">
+            <div class="language pull-right">
+              <app-language class="app-header-phone-child"></app-language>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

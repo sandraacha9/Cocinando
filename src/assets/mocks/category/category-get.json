@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Entrantes"
+  },
+  {
+    "id": 2,
+    "name": "Ensaladas"
+  },
+  {
+    "id": 3,
+    "name": "Pizzas"
+  },
+  {
+    "id": 4,
+    "name": "Otros"
+  },
+  {
+    "id": 5,
+    "name": "Postres"
+  }
+]

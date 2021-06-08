@@ -1,0 +1,168 @@
+.flex {
+  display: flex;
+  &.flex-row {
+    flex-direction: row;
+
+    &.flex-horizontal-start {
+      justify-content: flex-start;
+    }
+    &.flex-horizontal-end {
+      justify-content: flex-end;
+    }
+    &.flex-horizontal-between {
+      justify-content: space-between;
+    }
+    &.flex-horizontal-center {
+      justify-content: center;
+    }
+  }
+
+  &.flex-column {
+    flex-direction: column;
+    &.flex-vertical-center {
+      align-items: center;
+    }
+  }
+
+  & > * {
+    display: flex;
+  }
+
+}
+
+@mixin flex-row($side) {
+  .flex-#{$side}-row {
+    display: flex;
+    flex-direction: row;
+    & > * {
+      display: flex;
+    }
+  }
+}
+
+@mixin flex-column($side) {
+  .flex-#{$side}-col {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      display: flex;
+    }
+  }
+}
+
+
+@mixin flex-horizontal-start($side) {
+  .flex-#{$side}-h-start {
+    justify-content: flex-start
+  }
+}
+@mixin flex-horizontal-end($side) {
+  .flex-#{$side}-h-end {
+    justify-content: flex-end
+  }
+}
+@mixin flex-horizontal-center($side) {
+  .flex-#{$side}-h-center {
+    justify-content: center
+  }
+}
+@mixin flex-horizontal-between($side) {
+  .flex-#{$side}-h-between {
+    justify-content: space-between;
+  }
+}
+@mixin flex-horizontal-around($side) {
+  .flex-#{$side}-h-around {
+    justify-content: space-around;
+  }
+}
+
+
+@mixin flex-vertical-start($side) {
+  .flex-#{$side}-v-start {
+    align-items: flex-start;
+  }
+}
+@mixin flex-vertical-end($side) {
+  .flex-#{$side}-v-end {
+    align-items: flex-end;
+  }
+}
+@mixin flex-vertical-center($side) {
+  .flex-#{$side}-v-center {
+    align-items: center
+  }
+}
+@mixin flex-vertical-strech($side) {
+  .flex-#{$side}-v-strech {
+    align-items: stretch;
+  }
+}
+@mixin flex-vertical-baseline($side) {
+  .flex-#{$side}-v-baseline {
+    align-items: baseline;
+  }
+}
+
+
+
+@media #{$widthXS} {
+  @include flex-row('xs');
+  @include flex-column('xs');
+  @include flex-horizontal-start('xs');
+  @include flex-horizontal-end('xs');
+  @include flex-horizontal-center('xs');
+  @include flex-horizontal-between('xs');
+  @include flex-horizontal-around('xs');
+
+  @include flex-vertical-start('xs');
+  @include flex-vertical-end('xs');
+  @include flex-vertical-center('xs');
+  @include flex-vertical-strech('xs');
+  @include flex-vertical-baseline('xs');
+}
+@media #{$widthSM} {
+  @include flex-row('sm');
+  @include flex-column('sm');
+  @include flex-horizontal-start('sm');
+  @include flex-horizontal-end('sm');
+  @include flex-horizontal-center('sm');
+  @include flex-horizontal-between('sm');
+  @include flex-horizontal-around('sm');
+
+  @include flex-vertical-start('sm');
+  @include flex-vertical-end('sm');
+  @include flex-vertical-center('sm');
+  @include flex-vertical-strech('sm');
+  @include flex-vertical-baseline('sms');
+}
+@media #{$widthMD} {
+  @include flex-row('md');
+  @include flex-column('md');
+  @include flex-horizontal-start('md');
+  @include flex-horizontal-end('md');
+  @include flex-horizontal-center('md');
+  @include flex-horizontal-between('md');
+  @include flex-horizontal-around('md');
+
+  @include flex-vertical-start('md');
+  @include flex-vertical-end('md');
+  @include flex-vertical-center('md');
+  @include flex-vertical-strech('md');
+  @include flex-vertical-baseline('md');
+}
+@media #{$widthLG} {
+  @include flex-row('lg');
+  @include flex-column('lg');
+  @include flex-horizontal-start('lg');
+  @include flex-horizontal-end('lg');
+  @include flex-horizontal-center('lg');
+  @include flex-horizontal-between('lg');
+  @include flex-horizontal-around('lg');
+
+  @include flex-vertical-start('lg');
+  @include flex-vertical-end('lg');
+  @include flex-vertical-center('lg');
+  @include flex-vertical-strech('lg');
+  @include flex-vertical-baseline('lg');
+}

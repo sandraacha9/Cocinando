@@ -1,0 +1,17 @@
+<div class="app-sidebar-backdrop hidden-lg hidden-md" [ngClass]="{'app-sidebar-show': sidebarShow}" (click)="hideSidebar()"></div>
+<div class="app-sidebar hidden-lg hidden-md" [ngClass]="{'app-sidebar-show': sidebarShow}">
+  <ul class="nav nav-pills nav-stacked app-nav-sidebar">
+    <li class="app-nav-sidebar-item app-nav-sidebar-item-close text-right">
+      <a class="app-nav-sidebar-item-link" (click)="hideSidebar()">{{'general.close' | translate}}
+        <span class="app-icon app-icon-x-close"></span>
+      </a>
+    </li>
+  </ul>
+  <div class="app-sidebar-main">
+      <ul class="nav nav-pills nav-stacked items">
+        <div>
+          <app-info-menu (selectLinkEvent)="onSelectLink()"></app-info-menu>
+        </div>
+      </ul>
+  </div>
+</div>

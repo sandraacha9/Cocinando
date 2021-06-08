@@ -1,0 +1,36 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/custom_bootstrap.scss';
+@import '../../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+
+:host {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.app-private-zone-list-content {
+  .app-private-zone-list-item {
+    padding: 10px 0 10px 15px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  :host {
+    margin-bottom: 0;
+  }
+
+  .app-private-zone-list-content {
+    margin-left: 15px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-my-orders-list-item-info-flight{
+    width: 90%;
+    .app-my-orders-list-item-info-airport-description {
+      max-width: 55%;
+    }
+  }
+  .app-icon-confirmation {
+    margin-right: 5px;
+  }
+}

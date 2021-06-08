@@ -1,0 +1,94 @@
+{
+  "idOrder": 1,
+  "ticket": "12345A",
+  "total": 30.50,
+  "details": [
+    {
+      "id": 1,
+      "units": 2,
+      "totalPrice": 12.00,
+      "item": {
+        "productId": 1,
+        "title": "PROVOLETA AL HORNO",
+        "description": "Medallón de queso Provolone fundido con especias y aceite de oliva",
+        "price": 6.00,
+        "url": "./assets/images/provoleta.jpg",
+        "allergens": [{
+              "name": "dairyProducts",
+              "description": "Lacteos"
+          },
+          {
+              "name": "molluscs",
+              "description": "Moluscos"
+          },
+          {
+              "name": "sulfurDioxideSulfites",
+              "description": "Dioxido de azufre y sulfitos"
+          },
+          {
+              "name": "egg",
+              "description": "Huevo"
+        }],
+        "category": 1
+      }
+    },
+    {
+      "id": 2,
+      "units": 1,
+      "totalPrice": 7.00,
+      "item": {
+        "productId": 6,
+        "title": "CÉSAR CON POLLO",
+        "description": "Mezcla de lechugas, pollo ahumado, crujientes de pan, crujientes de beicon y queso parmesano, aliñada con salsa César",
+        "price": 7.00,
+        "url": "./assets/images/cesar.jpg",
+        "allergens": [{
+              "name": "dairyProducts",
+              "description": "Lacteos"
+          },
+          {
+              "name": "molluscs",
+              "description": "Moluscos"
+          },
+          {
+              "name": "sulfurDioxideSulfites",
+              "description": "Dioxido de azufre y sulfitos"
+          },
+          {
+              "name": "egg",
+              "description": "Huevo"
+        }],
+        "category": 2
+      }
+    },
+    {
+      "id": 3,
+      "units": 1,
+      "totalPrice": 11.50,
+      "item": {
+        "productId": 10,
+        "title": "CALZONE FUNGHI",
+        "description": "Calzone relleno de queso mozzarella, pollo ahumado, champiñones y setas",
+        "price": 11.50,
+        "url": "./assets/images/calzone.jpg",
+        "allergens": [{
+              "name": "dairyProducts",
+              "description": "Lacteos"
+          },
+          {
+              "name": "molluscs",
+              "description": "Moluscos"
+          },
+          {
+              "name": "sulfurDioxideSulfites",
+              "description": "Dioxido de azufre y sulfitos"
+          },
+          {
+              "name": "egg",
+              "description": "Huevo"
+        }],
+        "category": 3
+      }
+    }
+  ]
+}

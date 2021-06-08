@@ -1,0 +1,100 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/custom_bootstrap.scss';
+
+:host {
+  z-index: 4;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $cookies_background_color;
+  padding: 20px;
+
+  &.app-info-panel-accepted {
+    display: none;
+  }
+
+  .no-float {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+  }
+}
+
+.app-info-panel-main {
+  display: table-row;
+  height: 70px;
+  .app-info-panel-item-icon {
+    min-width: 40px;
+    text-align: center;
+  }
+
+  .app-info-panel-item-message {
+    text-align: left;
+    padding: 10px 15px;
+    border-left: 1px solid #bbbba9;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .app-info-panel-item-button {
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .btn {
+    &.app-btn {
+      &.app-btn-info {
+        background-color: $cookies_button_color;
+        color: #000;
+        border: 1px solid $color_k3;
+        border-radius: 0;
+        padding: 25px 35px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-info-panel-main {
+    height: 170px;
+  }
+}
+
+@media #{$widthXS} {
+  :host {
+    padding: 10px;
+  }
+
+  .app-info-panel-main {
+    height: 150px;
+    .app-info-panel-item-icon {
+      min-width: 20px;
+    }
+
+    .app-info-panel-item-message {
+      padding: 10px 5px;
+      font-size: 0.7rem;
+    }
+
+    .app-info-panel-item-button {
+      min-width: 90px;
+    }
+
+    .btn {
+      &.app-btn {
+        &.app-btn-info {
+          background-color: $cookies_button_color;
+          color: #000;
+          border: 1px solid $color_k3;
+          border-radius: 0;
+          padding: 15px 10px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

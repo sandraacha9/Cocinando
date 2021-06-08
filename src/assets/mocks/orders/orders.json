@@ -1,0 +1,12 @@
+[
+  {
+    "idOrder": 1,
+    "ticket": "12345A",
+    "total": 30.50
+  },
+  {
+    "idOrder": 2,
+    "ticket": "12345B",
+    "total": 10.50
+  }
+]

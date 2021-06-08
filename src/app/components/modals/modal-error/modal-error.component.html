@@ -1,0 +1,18 @@
+<div class="app-modal" appBsModalVerticalCenterAlign>
+  <div class="modal-header bg-color-r">
+    <span class="modal-title pull-left">
+      <span class="app-icon app-icon-alert"></span>
+      {{'httpExceptions.title.error' | translate}}
+    </span>
+  </div>
+  <div *ngIf="error!=null && error.text!=null" class="modal-body text-center">
+    <p>
+      {{('httpExceptions.responseErrors.' + error.text | translate) || ('httpExceptions.responseErrors.generic' | translate)}}
+    </p>
+    <span>
+      <button class="btn app-btn app-btn-primary" data-dismiss="modal" (click)="close()">{{'general.close' | translate}}</button>
+    </span>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>

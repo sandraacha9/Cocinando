@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "productId": 1,
+            "title": "PROVOLETA AL HORNO",
+            "price": 6.00,
+            "url": "./assets/images/provoleta.jpg",
+            "category": 1
+        },
+        {
+            "productId": 2,
+            "title": "PROVOLETA CORPENTINA",
+            "price": 7.00,
+            "url": "./assets/images/corpentina.jpg",
+            "category": 1
+        },
+        {
+            "productId": 3,
+            "title": "PROVOLETA POMODORO",
+            "price": 7.50,
+            "url": "./assets/images/pomodoro.jpg",
+            "category": 1
+        },
+        {
+            "productId": 4,
+            "title": "TABLA DE TOSTAS",
+            "price": 8.50,
+            "url": "./assets/images/tostas.jpg",
+            "category": 1
+        }
+    ]
+}

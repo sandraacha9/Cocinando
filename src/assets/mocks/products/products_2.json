@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "productId": 5,
+            "title": "CAPRESE ESPECIAL",
+            "price": 8.20,
+            "url": "./assets/images/caprese.jpg",
+            "category": 2
+        },
+        {
+            "productId": 6,
+            "title": "CÉSAR CON POLLO",
+            "price": 7.00,
+            "url": "./assets/images/cesar.jpg",
+            "category": 2
+        },
+        {
+            "productId": 7,
+            "title": "TEMPLADA",
+            "price": 9.50,
+            "url": "./assets/images/templada.jpg",
+            "category": 2
+        },
+        {
+            "productId": 8,
+            "title": "AGUACATE",
+            "price": 8.70,
+            "url": "./assets/images/aguacate.jpg",
+            "category": 2
+        }
+    ]
+}

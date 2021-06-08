@@ -1,0 +1,24 @@
+{
+  "productId": 6,
+  "title": "CÉSAR CON POLLO",
+  "description": "Mezcla de lechugas, pollo ahumado, crujientes de pan, crujientes de beicon y queso parmesano, aliñada con salsa César",
+  "price": 7.00,
+  "url": "./assets/images/cesar.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 2
+}

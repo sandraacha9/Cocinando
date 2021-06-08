@@ -1,0 +1,56 @@
+<div class="app-main">
+  <div class="app-main-content">
+    <div class="app-error-page-content">
+      <div class="app-error-page-title color-b">{{'404.title' | translate}}</div>
+      <div class="app-error-page-message color-k">{{'404.message' | translate}}</div>
+      <div class="app-error-page-button">
+        <button class="btn app-btn app-btn-section" (click)="goToShop()">
+          <span class=" text-uppercase">{{'404.button' | translate}}</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="app-main-header hidden-xs hidden-sm">
+      <div class="app-main-header-row flex-md-row flex-md-h-end flex-lg-row flex-lg-h-end">
+        <div>
+          <app-language class="app-main-header-child"></app-language>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-main-footer position-xs-absolute position-xs-bottom position-sm-absolute position-sm-bottom position-md-absolute position-md-bottom position-lg-absolute position-lg-bottom">
+      <div class="app-main-footer-content">
+        <app-footer></app-footer>
+      </div>
+    </div>
+
+    <div class="app-header-phone hidden-md hidden-lg">
+      <div class="container">
+        <div class="navbar app-navbar-header-phone">
+          <ul class="nav navbar-nav">
+            <li class="navbar-item navbar-item-logo float-left">
+              <div class="app-logo">
+                <img #logo tabIndex="0" class="app-logo-image" src='./assets/images/Logo.png' />
+              </div>
+            </li>
+            <li class="navbar-item pull-right">
+              <div class="language">
+                <app-language class="app-main-header-child"></app-language>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-sidebar">
+      <ul class="nav nav-pills nav-stacked app-nav-sidebar">
+        <li class="app-nav-sidebar-item app-nav-sidebar-item-logo hidden-xs hidden-sm">
+          <div class="app-logo">
+            <img #logo tabIndex="0" class="app-logo-image" src='./assets/images/Logo.png' />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

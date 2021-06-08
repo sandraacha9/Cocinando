@@ -1,0 +1,3 @@
+<div class="app-allergens-panel-content">
+  <app-allergens-panel-item *ngFor="let allergen of allergens; trackBy: allergenFn;" class="app-allergens-panel-item" [allergen]="allergen.name"></app-allergens-panel-item>
+</div>

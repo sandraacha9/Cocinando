@@ -1,0 +1,123 @@
+$color_b: #5996cc;
+$color_b_bk_hover: #197fd5;
+$color_b1: #a1c8e9;
+$color_b2: #e5f3ff;
+$color_b3: #003b6d;
+$color_b_alert: #002f57;
+$color_b3_bk_hover: #194e7b;
+$color_k: #303030;
+$color_k_alert: #262626;
+$color_k1: #6a6a6a;
+$color_k2: #b3b3b3;
+$color_k2_bk_hover: #bababa;
+$color_k3: #d0d0d0;
+$color_r: #d4439c;
+$color_r_bk_hover: #d855a5;
+$color_r1: #6a214e;
+$color_r_alert: #541a3e;
+$color_r2: #ffa9de;
+$color_g: #2cbf60;
+$color_g_alert: #23984c;
+$color_w: #fff;
+$color_w_bk_hover: #e5e5e5;
+$cookies_background_color: #f9f9de;
+$cookies_button_color: #fcfce8;
+$color_gr: #3d0a0a;
+$color_gr1: #885050;
+$color_gr2: #c59f9f;
+
+$box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+
+.color-b {
+  color: $color_b;
+}
+
+.bg-color-b {
+  background-color: $color_b;
+}
+
+.bg-color-b-hover {
+  &:hover {
+    background-color: $color_b_bk_hover;
+  }
+}
+
+.color-b1 {
+  color: $color_b1;
+}
+
+.color-b3 {
+  color: $color_b3;
+}
+
+.bg-color-b3 {
+  background-color: $color_b3;
+}
+
+.bg-color-b3-hover {
+  &:hover {
+    background-color: $color_b3_bk_hover;
+  }
+}
+
+.color-w {
+  color: $color_w;
+}
+
+.bg-color-w-hover {
+  &:hover {
+    background-color: $color_w_bk_hover;
+  }
+}
+
+.color-k2 {
+  color: $color_k2;
+}
+
+.bg-color-k2 {
+  background-color: $color_k2;
+}
+
+.bg-color-k2-hover {
+  &:hover {
+    background-color: $color_k2_bk_hover;
+  }
+}
+
+.color-k {
+  color: $color_k;
+}
+
+.color-k1 {
+  color: $color_k1;
+}
+
+.color-k3 {
+  color: $color_k3;
+}
+
+.color-r {
+  color: $color_r;
+}
+
+.bg-color-r {
+  background-color: $color_r;
+}
+
+.bg-color-r-hover {
+  &:hover {
+    background-color: $color_r_bk_hover;
+  }
+}
+
+.color-r1 {
+  color: $color_r1;
+}
+
+.color-r2 {
+  color: $color_r2;
+}
+
+.color-g {
+  color: $color_g;
+}

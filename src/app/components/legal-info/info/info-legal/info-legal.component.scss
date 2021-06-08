@@ -1,0 +1,87 @@
+@import "src/scss/palette.scss";
+@import 'src/scss/custom_bootstrap.scss';
+
+$sidebar_width: 300px;
+$menu_height: 40px;
+$content_top: 60px;
+$background_color: #f9f9f9;
+:host {
+  display: block;
+  height: 100%;
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0;
+  }
+
+  .nav > li > a:hover,
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $menu_height;
+    background-color: $background_color;
+    border-bottom: 1px solid $color_k2;
+
+    .header {
+      width: $sidebar_width;
+    }
+    .breadcrumbs {
+      text-transform: uppercase;
+      .breadcrumb {
+        background-color: $background_color;
+      }
+    }
+  }
+  .sidebar {
+    position: fixed;
+    min-width: $sidebar_width;
+    max-width: $sidebar_width;
+    height: 100vh;
+    top: $content_top;
+    opacity: 0.6;
+    padding: 0 30px 0 30px;
+  }
+
+  .content {
+    user-select: text;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    height: 100%;
+    // margin-top: $menu_height;
+    padding-top: $content_top;
+    padding-bottom: 30px;
+
+    &.app-cookies-policy-not-accepted{
+      padding-bottom: 130px;
+    }
+
+    .anchor {
+      position: relative;
+      top: -10px;
+    }
+  }
+}
+
+@media #{$widthLG}, #{$widthMD} {
+  .content {
+    margin-left: $sidebar_width;
+    border-left: 1px solid $color_k2;
+    padding-left: 15px;
+    margin-right: 30px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .content {
+    margin-left: 30px;
+    border-left: 0;
+    margin-right: 30px;
+  }
+}

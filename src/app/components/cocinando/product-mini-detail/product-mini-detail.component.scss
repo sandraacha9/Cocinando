@@ -1,0 +1,130 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/custom_bootstrap.scss';
+@import '../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+
+:host {
+  display: block;
+
+  &.app-product-grid-child {
+    .app-product-mini-detail-content {
+      .app-product-mini-detail-image {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .app-product-mini-detail-desc {
+        text-align: center;
+        font-size: 1rem;
+      }
+      .app-product-mini-detail-price {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #3a0101;
+        .app-product-mini-detail-price-quantity {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.app-mini-cart-child {
+    .app-product-mini-detail-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-left: 1px;
+      margin-right: 1px;
+      &:first-child {
+        margin-top: 1px;
+      }
+      &:hover{
+        @include box-shadow(0px 0px 5px 0px $color_k2);
+      }
+      .app-product-mini-detail-image {
+        // float: left;
+        display: flex;
+        flex-basis: 75px;
+        flex-grow: 0;
+        // width: 70px;
+        // height: 70px;
+        img {
+          width: 100%;
+          height: 70px;
+        }
+      }
+
+      .app-product-mini-detail-info {
+        padding-left: 15px;
+        flex-basis: 75%;
+        flex-grow: 0;
+        // width: 200px;
+
+        // float: left;
+        display: flex;
+        flex-direction: column;
+
+        .app-product-mini-detail-desc {
+          display: flex;
+
+          font-weight: 600;
+        }
+
+        .app-product-mini-detail-price {
+          .app-product-mini-detail-price-not-current {
+            display: none;
+          }
+
+          color: $color_b;
+          font-weight: bold;
+          font-size: 1.2857rem;
+        }
+        .app-product-mini-detail-price-quantity {
+          font-size: 1rem;
+          color: $color_k;
+        }
+      }
+    }
+  }
+
+  &.app-product-gallery-child {
+    .app-product-mini-detail-content {
+      .app-product-mini-detail-image {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .app-product-mini-detail-desc {
+        text-align: center;
+        font-size: 1rem;
+      }
+      .app-product-mini-detail-price {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8571rem;
+        .app-product-mini-detail-price {
+          color: $color_b;
+        }
+
+        .app-product-mini-detail-price-quantity {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS} {
+  :host {
+    &.app-product-gallery-child {
+      .app-product-mini-detail-content {
+        .app-product-mini-detail-price {
+          font-size: 0.8571rem;
+        }
+      }
+    }
+  }
+}

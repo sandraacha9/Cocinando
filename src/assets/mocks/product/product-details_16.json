@@ -1,0 +1,24 @@
+{
+  "productId": 16,
+  "title": "CANELONES",
+  "description": "Dos canelones rellenos de carne de ternera, cubiertos de bechamel y gratinados con queso parmesano",
+  "price": 10.00,
+  "url": "./assets/images/canelones.jpg",
+  "allergens": [{
+        "name": "dairyProducts",
+        "description": "Lacteos"
+    },
+    {
+        "name": "molluscs",
+        "description": "Moluscos"
+    },
+    {
+        "name": "sulfurDioxideSulfites",
+        "description": "Dioxido de azufre y sulfitos"
+    },
+    {
+        "name": "egg",
+        "description": "Huevo"
+  }],
+  "category": 4
+}

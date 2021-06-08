@@ -1,0 +1,98 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/components/_buttons.scss';
+
+.dropdown {
+  &.button-dropdown {
+    height: 45px;
+    @extend .app-btn-transparent;
+    color: $color_k1;
+    .dropdown-toggle {
+      height: 100%;
+    }
+  }
+  &.button-modal {
+    @extend .app-btn-transparent;
+    color: $color_w;
+    display: none;
+    .app-icon {
+      &.app-icon-arrow-down {
+        display: none;
+      }
+    }
+  }
+}
+.button-dropdown {
+  .app-selector-list  {
+    overflow: visible;
+    min-width: 180px !important;
+    .component-list {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 0;
+      overflow: hidden;
+      padding: 3px;
+      display: block;
+      border-radius: 5px;
+      li:first-child a {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      li:last-child a {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+  .app-selector-list::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 2px;
+    left: 85%;
+    box-sizing: border-box;
+    border: 0.5em solid black;
+    border-color: transparent transparent white white;
+    transform-origin: 0 0;
+    transform: rotate(135deg);
+
+    box-shadow: -1px 1px 0px 0 rgba(0, 0, 0, 0.2);
+  }
+  &.button-dropdown {
+    margin-left: 10px;
+    margin-right: 10px;
+    .button-dropdown-content {
+      .button-dropdown-line {
+        position: relative;
+        height: 1px;
+        background-color: $color_k3;
+        width: 0;
+        transition: width .3s;
+      }
+    }
+  }
+  &.open {
+    .dropdown-content {
+      .button-dropdown-line {
+        width: 100%;
+      }
+    }
+  }
+  &:hover {
+    .button-dropdown-content {
+      .button-dropdown-line {
+        width: 100%;
+      }
+    }
+  }
+}
+.app-selector-list-item {
+  .dropdown-item {
+    width: 100%;
+    display: inline-block !important;
+    padding-right: 10px !important;
+    &.active {
+      color: $color_gr !important;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<div class="sidebar hidden-xs hidden-sm">
+  <ul class="nav nav-pills nav-stacked items">
+    <app-info-menu></app-info-menu>
+  </ul>
+</div>
+
+<div class="content" [ngClass]="{'app-info-not-accepted': !infoAccepted()}">
+  <a class="anchor" id="legal-info">&nbsp;</a>
+  <h1 class="info-header">{{'infoLegal.legalInfo.header'| translate}}</h1>
+
+  <a class="anchor" id="protection">&nbsp;</a>
+  <h2 class="info-section-title">1. {{'infoLegal.legalInfo.sections.protection.title'| translate}}</h2>
+  <p class="info-paragraph">{{'infoLegal.legalInfo.sections.protection.message'| translate}}</p>
+  <p class="info-paragraph">{{'infoLegal.legalInfo.sections.protection.message2'| translate}}</p>
+  <p class="info-paragraph">{{'infoLegal.legalInfo.sections.protection.message3'| translate}}
+    <a class="info-paragraph-link-email">{{'infoLegal.legalInfo.sections.protection.link-email'| translate}}</a>
+  </p>
+  <p class="info-paragraph">{{'infoLegal.legalInfo.sections.protection.message4'| translate}}</p>
+
+  <a class="anchor" id="cookies">&nbsp;</a>
+  <h2 class="info-section-title">2. {{'infoLegal.legalInfo.sections.cookies.title'| translate}}</h2>
+  <p class="info-paragraph">{{'infoLegal.legalInfo.sections.cookies.message'| translate}}</p>
+  <p class="info-paragraph">{{'infoLegal.legalInfo.sections.cookies.message2'| translate}}</p>
+</div>
+
+<div class="menu hidden-xs hidden-sm">
+  <div class="header pull-left">&nbsp;</div>
+  <div class="breadcrumbs pull-left">
+    <ol class="breadcrumb">
+      <li>
+        <a href="/cocinando/">
+          <span class="app-icon-flight"></span> {{'general.title'| translate}}
+        </a>
+      </li>
+      <li>{{'infoLegal.legalInfo.header'| translate}}</li>
+    </ol>
+  </div>
+  <div class="pull-right">
+    <app-language class="app-main-header-child"></app-language>
+  </div>
+</div>
+
+<div class="header-phone hidden-lg hidden-md">
+  <app-legal-info-header-phone [title]="'infoLegal.legalInfo.header'| translate"></app-legal-info-header-phone>
+</div>
+
+<app-legal-info-sidebar-phone [page]="'legal-info'"></app-legal-info-sidebar-phone>

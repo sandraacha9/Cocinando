@@ -1,0 +1,14 @@
+<div *ngIf="title" class="app-product-grid-title">{{title}}</div>
+<div *ngIf="products !== null && products.length !== 0" class="app-product-grid-container container">
+  <div class="row app-product-grid-content-product-wrapper">
+    <a *ngFor="let product of products; let i = index" class="app-product-grid-content-item" [routerLink]="['/cocinando/category', product.category, 'product-details', product.productId]">
+      <app-product-mini-detail class="app-product-grid-child" [product]="product"></app-product-mini-detail>
+    </a>
+    <div *ngFor="let i of emptyItems(2)" class="hidden-sm hidden-md hidden-lg app-product-grid-content-item app-product-grid-content-item-empty">
+      &nbsp;
+    </div>
+    <div *ngFor="let i of emptyItems(4)" class="hidden-xs app-product-grid-content-item app-product-grid-content-item-empty">
+      &nbsp;
+    </div>
+  </div>
+</div>

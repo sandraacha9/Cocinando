@@ -1,0 +1,11 @@
+<div class="btn-group app-selector app-user-cart-button app-user-cart-button-dropdown" dropdown [isDisabled]="totalProducts === 0">
+  <button dropdownToggle type="button" class="btn dropdown-toggle">
+    <span class="app-icon app-icon-cart"></span>
+    <span class="app-user-cart-quantity">{{totalProducts}}</span>
+    <span class="app-icon big-icon horizontal app-selector-icon-down app-icon-arrow-down"></span>
+    <span class="app-icon big-icon horizontal app-selector-icon-up app-icon-arrow-up"></span>
+  </button>
+  <ul *dropdownMenu class="dropdown-menu dropdown-menu-right app-selector-list app-user-cart-products" role="menu">
+    <app-mini-cart class="app-user-cart-list"></app-mini-cart>
+  </ul>
+</div>

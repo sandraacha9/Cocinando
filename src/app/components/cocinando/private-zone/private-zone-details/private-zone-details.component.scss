@@ -1,0 +1,84 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/components/_buttons.scss';
+
+:host {
+  display: block;
+}
+
+.app-private-zone-details {
+  .app-private-zone-details-header {
+    font-size: 1.7142rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .app-private-zone-details-content {
+    margin-top: 40px;
+    .app-private-zone-details-empty {
+      font-size: 1.1428rem;
+      margin-top: 100px;
+      color: $color_k2;
+      font-weight: 600;
+      .app-private-zone-details-empty-text {
+        text-align: center;
+      }
+    }
+
+    .app-private-zone-details-sections {
+      border-bottom: 1px solid $color_k2 !important;
+      text-align: center;
+      .app-private-zone-details-section-descripton {
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+    .app-private-zone-details-product {
+      border-bottom: 1px solid $color_k3 !important;
+    }
+    .app-private-zone-details-footer {
+      width: 100%;
+      margin-top: 50px;
+      .app-private-zone-details-total {
+        font-size: 1.2857rem;
+        float: right;
+        .app-private-zone-details-total-price {
+          font-size: 1.7142rem;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-private-zone-details {
+    .app-private-zone-details-content {
+      margin-top: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      .app-private-zone-details-empty {
+        margin-top: 20px;
+      }
+      .app-private-zone-details-sections {
+        font-size: 0.7rem;
+      }
+      .app-private-zone-details-footer {
+        display: inline-block;
+        margin-top: 30px;
+        .app-private-zone-details-total {
+          font-size: 1.4285rem;
+          float: none;
+          .app-private-zone-details-total-price {
+            font-size: 1.7142rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthMD}, #{$widthLG} {
+  :host {
+    margin-top: 20px;
+  }
+}

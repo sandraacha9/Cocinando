@@ -1,0 +1,18 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+:host {
+  display: block;
+  &.app-allergens-panel-menu-detail-layout {
+    .app-allergens-panel-item {
+      float: right;
+    }
+  }
+  &.app-allergens-panel-popover-layout {
+    .app-allergens-panel-item {
+      float: left;
+    }
+  }
+}
+
+.app-allergens-panel-content {
+  @include clearfix();
+}

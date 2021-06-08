@@ -1,0 +1,67 @@
+@mixin position-relative($side) {
+  .position-#{$side}-relative {
+    position: relative;
+  }
+}
+
+@mixin position-fixed($side) {
+  .position-#{$side}-fixed {
+    position: fixed;
+  }
+}
+
+@mixin position-absolute($side) {
+  .position-#{$side}-absolute {
+    position: absolute;
+  }
+}
+
+@mixin position-bottom($side) {
+  .position-#{$side}-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@mixin position-top($side) {
+  .position-#{$side}-top {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+
+
+@media #{$widthXS} {
+  @include position-relative('xs');
+  @include position-fixed('xs');
+  @include position-top('xs');
+  @include position-bottom('xs');
+  @include position-absolute('xs');
+}
+
+@media #{$widthSM} {
+  @include position-relative('sm');
+  @include position-fixed('sm');
+  @include position-top('sm');
+  @include position-bottom('sm');
+  @include position-absolute('sm');
+}
+
+@media #{$widthMD} {
+  @include position-relative('md');
+  @include position-fixed('md');
+  @include position-top('md');
+  @include position-bottom('md');
+  @include position-absolute('md');
+}
+
+@media #{$widthLG} {
+  @include position-relative('lg');
+  @include position-fixed('lg');
+  @include position-top('lg');
+  @include position-bottom('lg');
+  @include position-absolute('lg');
+}

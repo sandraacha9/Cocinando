@@ -1,0 +1,53 @@
+<div class="app-cart-product-content" *ngIf="orderItem">
+    <div class="row">
+      <div class="app-cart-product-image col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <img appImgDefault [src]="orderItem.product.url" alt="">
+      </div>
+      <div class="app-cart-product-title flex-xs-col flex-sm-col col-xs-7 col-sm-7 col-md-3 col-lg-3">
+        <span class="title color-k" [innerHtml]="orderItem.product.title"></span>
+        <div class="app-cart-product-prices col-md-1 col-lg-1 hidden-md hidden-lg" *ngIf="orderItem.product.price !== null">
+          <span class="app-cart-product-price-normal color-k" *ngIf="orderItem.product.price">
+            {{orderItem.product.price}} €
+          </span>
+        </div>
+      </div>
+      <div class="app-cart-product-prices col-md-2 col-lg-2 hidden-xs hidden-sm" *ngIf="orderItem.product.price !== null">
+        <span class="app-cart-product-price-normal color-k" *ngIf="orderItem.product.price">
+          {{orderItem.product.price}} €
+        </span>
+      </div>
+      <div *ngIf="!isGift" class="noselect quantity-actions col-md-1 col-lg-1 hidden-xs hidden-sm">
+        <a class="quantity-less color-b app-cursor-icon" [ngClass]="{'disabled': orderItem.quantity == 1}" (click)="lessQuantity()">
+          <span class="app-icon app-icon-less"></span>
+        </a>
+        <span class="quantity color-k">
+          <strong>{{orderItem.quantity}}</strong>
+        </span>
+        <a class="quantity-more color-b app-cursor-icon" (click)="moreQuantity()">
+          <span class="app-icon app-icon-more"></span>
+        </a>
+      </div>
+      <div class="app-cart-product-amount col-xs-2 col-sm-2 col-md-3 col-lg-3 color-k">
+        <strong>
+          {{orderItem.totalPrice}} €
+        </strong>
+      </div>
+      <div class="app-cart-product-delete app-input-icon-clear app-cursor-icon color-k2 col-xs-1 col-sm-1 col-md-1 col-lg-1" (click)="deleteProduct()">
+        <span class="app-icon app-icon-x"></span>
+      </div>
+    </div>
+
+    <div class="row hidden-md hidden-lg">
+      <div class="noselect quantity-actions text-center col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <a class="quantity-less color-b app-cursor-icon" [ngClass]="{'disabled': orderItem.quantity == 1}" (click)="lessQuantity()">
+          <span class="app-icon app-icon-less"></span>
+        </a>
+        <span class="quantity color-k">
+          <strong>{{orderItem.quantity}}</strong>
+        </span>
+        <a class="quantity-more color-b app-cursor-icon" (click)="moreQuantity()">
+          <span class="app-icon app-icon-more"></span>
+        </a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+{
+  "data": [
+      {
+          "productId": 9,
+          "title": "ENROLLADA DE JAMÓN ASADO",
+          "price": 10.95,
+          "url": "./assets/images/enrollada.jpg",
+          "category": 3
+      },
+      {
+          "productId": 10,
+          "title": "CALZONE FUNGHI",
+          "price": 11.50,
+          "url": "./assets/images/calzone.jpg",
+          "category": 3
+      },
+      {
+          "productId": 11,
+          "title": "MIXTA",
+          "price": 9.50,
+          "url": "./assets/images/mixta.jpg",
+          "category": 3
+      },
+      {
+          "productId": 12,
+          "title": "PEPPERONI",
+          "price": 9.70,
+          "url": "./assets/images/pepperoni.jpg",
+          "category": 3
+      },
+      {
+          "productId": 13,
+          "title": "ROQUEFORT",
+          "price": 10.00,
+          "url": "./assets/images/roquefort.jpg",
+          "category": 3
+      },
+      {
+          "productId": 14,
+          "title": "BARBACOA",
+          "price": 9.90,
+          "url": "./assets/images/barbacoa.jpg",
+          "category": 3
+      }
+  ]
+}

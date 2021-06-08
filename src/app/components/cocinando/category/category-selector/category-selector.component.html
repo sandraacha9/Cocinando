@@ -1,0 +1,5 @@
+  <ul class="nav nav-pills nav-stacked app-nav-sidebar">
+      <li *ngFor="let category of categories" class="app-nav-sidebar-item app-nav-sidebar-item-category" [ngClass]="{'active': selectedCategoryId === category.categoryId}" role="presentation">
+        <a class="app-nav-sidebar-item-link" (click)="selectCategory()" [routerLink]="['/cocinando/category/', category.categoryId]">{{category.description}}</a>
+      </li>
+  </ul>

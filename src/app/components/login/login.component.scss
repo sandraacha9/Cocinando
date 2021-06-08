@@ -1,0 +1,60 @@
+@import 'src/scss/palette.scss';
+@import '../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+@import 'src/scss/custom_bootstrap.scss';
+
+$margin-size-lg: 10px;
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.app-login-content {
+  position: relative;
+  height: 100%;
+  padding-top: $margin-size-lg;
+  padding-bottom: $margin-size-lg;
+  margin-left: 10%;
+
+  .app-login-language {
+    position: fixed;
+    margin-top: 3%;
+    top: 0px;
+    right: 60px;
+    background-color: white;
+    border: 1px solid $color_k3;
+    border-radius: 5px;
+  }
+}
+.app-login-auth-container {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  background-image: url("/assets/images/food-background.jpg");
+}
+.app-header-phone {
+  .language {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 7px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-login-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+  }
+}

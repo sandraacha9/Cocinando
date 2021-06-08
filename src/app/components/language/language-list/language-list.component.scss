@@ -1,0 +1,15 @@
+@import 'src/scss/palette.scss';
+
+:host {
+  .dropdown-item {
+    width: 100%;
+    display: inline-block !important;
+  }
+  &:not(.component-modal-language-list) {
+    .dropdown-item {
+      .app-icon {
+        display: none;
+      }
+    }
+  }
+}

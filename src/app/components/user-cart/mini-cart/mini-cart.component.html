@@ -1,0 +1,13 @@
+<div class="app-mini-cart-products app-mini-cart-products-scroll" *ngIf="orderCart">
+  <li *ngFor="let item of orderCart.orderItems" role="menuitem" class="app-mini-cart-list-item clearfix">
+    <a *ngIf="item.totalPrice > 0" [routerLink]="['/cocinando/category', item.product.category, 'product-details', item.product.productId]">
+      <app-product-mini-detail (selectProductEvent)="onSelectProduct()" class="app-mini-cart-child" [product]="item.product" [quantity]="item.quantity"></app-product-mini-detail>
+    </a>
+  </li>
+</div>
+<li role="menuitem" class="app-mini-cart-list-go-cart" *ngIf="orderCart">
+  <button class="btn app-btn app-btn-primary" [disabled]="orderCart.orderItems === null && orderCart.orderItems.length === 0"
+    (click)="goToCart()">
+    <span class="app-icon app-icon-cart"></span> {{'cart.gotoCart' | translate }}
+  </button>
+</li>

@@ -1,0 +1,42 @@
+@import 'src/scss/palette.scss';
+@import '../../../scss/components/_buttons.scss';
+
+.app-login-child, .app-main-header-child, .app-header-phone-child {
+  :host {
+    display: block;
+    .app-language-button-dropdown {
+      .dropdown-toggle {
+        color: $color_k1;
+        &:hover {
+          .app-icon-language {
+            font-size: 1em;
+            color: $color_gr !important;
+          }
+        }
+        .app-icon-language {
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+    .app-language-button-modal {
+      @extend .app-btn-transparent;
+      color: $color_w !important;
+      .app-icon {
+        &.app-icon-arrow-down {
+          display: none;
+        }
+      }
+    }
+  }
+}
+:not(.app-login-child, .app-main-header-child, .app-header-phone-child) {
+  .app-language-button-modal {
+    @extend .app-btn-transparent;
+    &:hover {
+      .app-icon-language {
+        color: $color_gr !important;
+      }
+    }
+  }
+}

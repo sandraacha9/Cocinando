@@ -1,0 +1,38 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/components/_buttons.scss';
+
+:host {
+  display: table;
+}
+.app-user-logout-content {
+  .btn.app-btn-logout {
+    color: $color_k1;
+    background-color: transparent;
+    .app-icon-logout {
+      top: 2px;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &:hover {
+    color: $color_gr;
+    .app-icon-logout {
+      font-size: 1em;
+      color: $color_gr;
+    }
+  }
+}
+
+.app-sidebar-logout {
+  margin-left: 15px;
+  a {
+    color: $color_k;
+    text-decoration: none;
+    :hover {
+      .app-icon-logout {
+        color: $color_gr !important;
+      }
+    }
+  }
+}

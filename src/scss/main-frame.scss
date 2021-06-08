@@ -1,0 +1,116 @@
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+@import 'src/scss/app-header-phone.scss';
+
+.app-main {
+  .app-main-content {
+    padding-bottom: $main_footer_height;
+    padding-right: 5px;
+    position: relative;
+    min-height: 85vh;
+    padding-top: 0;
+    .app-main-header {
+      z-index: 2;
+      position: fixed;
+      top: 0;
+      left: $sidebar_width;
+      right: 0;
+      height: auto;
+      background-color: $color_w;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-bottom: 1px solid #f7f4f4;
+      .app-main-header-row {
+        &:nth-of-type(1) {
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+        &:nth-of-type(2) {
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .app-download-catalog {
+      .link-download-catalog {
+        &:hover {
+          .app-icon,
+          .area-data {
+            color: $color_w;
+          }
+        }
+      }
+    }
+    .app-main-footer {
+      z-index: 2;
+      height: $main_footer_height;
+      background-color: $color_w;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .app-main-footer-content {
+        display: flex;
+        margin: auto;
+        padding: 0 15px;
+      }
+    }
+  }
+  &:not(.app-hidden-category-header) {
+    .app-main-content {
+      .app-main-header {
+        .app-main-header-row {
+          &.app-main-category-header {
+            display: none;
+          }
+        }
+      }
+      .app-main-category-header {
+        display: none;
+      }
+      .app-main-subcategory-header {
+        display: none;
+      }
+    }
+    &:not(.app-show-search) {
+      .app-main-header-phone {
+        display: none;
+      }
+    }
+  }
+  &.app-show-search {
+    .app-main-category-header {
+      display: none;
+    }
+    .app-main-subcategory-header {
+      display: none;
+    }
+  }
+}
+
+@media #{$widthXS},
+#{$widthSM} {
+  .app-main {
+    .app-main-content {
+      padding-top: $phone_header_height;
+    }
+  }
+}
+
+@media #{$widthMD},
+#{$widthLG} {
+  .app-main {
+    & {
+      padding-left: $sidebar_width - 1px;
+    }
+    .app-download-catalog {
+      margin-top: 40px;
+      padding-left: 15px;
+      .link-download-catalog {
+        color: $color_b1;
+        text-decoration: none;
+        .app-icon-download {
+          top: 3px;
+        }
+      }
+    }
+  }
+}

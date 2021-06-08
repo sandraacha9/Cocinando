@@ -1,0 +1,11 @@
+@import 'src/scss/custom_bootstrap.scss';
+
+@media #{$widthXS}, #{$widthSM} {
+  .modal-header {
+    padding: 5px;;
+    padding-bottom: 5px;
+    .modal-title {
+      font-size: 1.0714rem;
+    }
+  }
+}

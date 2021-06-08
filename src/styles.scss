@@ -1,0 +1,23 @@
+$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+
+@import './scss/custom_bootstrap.scss';
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";
+
+@import './scss/main.scss';
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+}
+
+@media  #{$widthXS} {
+  body {
+    background-color: white;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="app-private-zone-details">
+  <div class="container">
+    <div class="app-private-zone-details-content" *ngIf="order">
+
+      <div *ngIf="order.orderItems !== null && order.orderItems.length > 0" class="app-private-zone-details-sections row color-k2">
+        <div class="app-private-zone-details-section col-xs-2 col-sm-2 col-md-2 col-lg-2 color-k text-uppercase">{{'cart.product'| translate}}</div>
+        <div class="app-private-zone-details-section app-private-zone-details-section-descripton col-xs-8 col-sm-8 col-md-4 col-lg-4 color-k text-uppercase">{{'cart.description'| translate}}</div>
+        <div class="app-private-zone-details-section col-md-2 col-lg-2 color-k text-uppercase hidden-xs hidden-sm">{{'cart.priceUnit'| translate}}</div>
+        <div class="app-private-zone-details-section col-md-1 col-lg-1 color-k text-uppercase hidden-xs hidden-sm">{{'cart.quantity'| translate}}</div>
+        <div class="app-private-zone-details-section col-xs-2 col-sm-2 col-md-3 col-lg-3 color-k text-uppercase">{{'cart.price'| translate}}</div>
+      </div>
+      <div class="app-private-zone-details-products" *ngIf="order.orderItems">
+        <div class="app-private-zone-details-product" *ngFor="let orderItem of order.orderItems; let i = index">
+          <app-private-zone-details-item [total]="orderItem.totalPrice" [product]="orderItem.product" [quantity]="orderItem.quantity"
+            [index]="i"></app-private-zone-details-item>
+        </div>
+      </div>
+      <div *ngIf="order.orderItems !== null && order.orderItems.length > 0" class="app-private-zone-details-footer">
+        <div class="app-private-zone-details-total flex-xs-row flex-sm-row flex-md-row flex-lg-row flex-xs-v-center flex-sm-v-center flex-md-v-center flex-lg-v-center flex-xs-h-between flex-ms-h-between">
+          <span class="color-k text-uppercase"> {{'cart.total'| translate}}</span>
+          <span class="app-private-zone-details-total-price color-k">
+            <strong>{{order.total}} €</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-private-zone-details-content" *ngIf="!orderId">
+      <div class="app-private-zone-details-empty text-uppercase flex-lg-col flex-lg-v-center flex-lg-h-center flex-md-col flex-md-v-center flex-md-h-center flex-sm-col flex-sm-v-center flex-sm-h-center flex-xs-col flex-xs-v-center flex-xs-h-center">
+        <span class="app-private-zone-details-empty-text">{{'cart.noOrderSelected'| translate}}</span>
+      </div>
+    </div>
+  </div>
+</div>

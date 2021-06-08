@@ -1,0 +1,17 @@
+<div class="app-modal" appBsModalVerticalCenterAlign>
+  <div class="modal-header bg-color-b">
+    <span *ngIf="message!=null" class="modal-title pull-left">
+      <span class="app-icon app-icon-confirmation"></span>
+      {{message.title | translate}}
+    </span>
+  </div>
+  <div *ngIf="message!=null" class="modal-body text-center">
+    <p *ngIf="message.text">{{message.text | translate}}</p>
+    <p *ngIf="message.errorDescription">{{message.errorDescription | translate}}</p>
+    <span>
+      <button class="btn app-btn app-btn-primary" data-dismiss="modal" (click)="close()">{{'general.acept' | translate}}</button>
+    </span>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>

@@ -1,0 +1,156 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/';
+
+bs-modal-backdrop {
+  opacity: 0 !important;
+}
+
+modal-container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  border-radius: 16px;
+  padding: 20px 20px 20px 20px;
+  .app-modal {
+    .modal-header {
+      border-bottom: 0;
+      padding-bottom: 0px;
+      .modal-title {
+        text-transform: uppercase;
+      }
+    }
+    .modal-body {
+      padding-bottom: 0px !important;
+    }
+    .modal-footer {
+      display: none;
+    }
+  }
+}
+
+.modal-height {
+  .modal-content {
+    height: 91vh;
+    overflow-y: auto;
+  }
+}
+
+@media #{$widthXS},
+#{$widthSM} {
+  .modal-title {
+    font-size: 1.1428rem;
+  }
+}
+
+@media #{$widthXS} {
+  .modal {
+    .modal-dialog {
+      .modal-content {
+        padding: 10px;
+        .modal-body {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS},
+#{$widthSM},
+#{$widthMD},
+#{$widthLG} {
+  .modal.fade {
+    .app-modal-bottom {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      .modal-content {
+        border-radius: 5px;
+      }
+    }
+    .app-modal-plan {
+      .modal-content {
+        padding: 0;
+        .modal-body {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthSM},
+#{$widthMD},
+#{$widthLG} {
+  .modal.fade {
+    .app-modal-sm {
+      width: 400px;
+    }
+  }
+}
+
+@media #{$widthMD} {
+  .modal.fade {
+    .app-modal-menu-detail {
+      width: 880px;
+    }
+  }
+}
+
+@media #{$widthLG} {
+  .modal.fade {
+    .app-modal-menu-detail {
+      width: 1024px;
+    }
+  }
+}
+
+@media #{$widthMD},
+#{$widthLG} {
+  .modal-dialog {
+    margin: auto;
+  }
+}
+
+/* MODAL MENU DETAIL */
+
+.modal {
+  .modal-dialog {
+    &.app-modal-menu-detail {
+      .modal-content {
+        padding: 2rem;
+        border-radius: 5px;
+        .modal-header {
+          padding-left: 0;
+          padding-top: 0;
+          padding-right: 0;
+          button.close {
+            margin-top: 5px;
+          }
+        }
+        .modal-body {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media #{$widthXS},
+#{$widthSM} {
+  .modal {
+    .modal-dialog {
+      &.app-modal-menu-detail {
+        .modal-content {
+          padding: 0;
+          .modal-body {
+            padding-top: 0;
+            padding-right: 0;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

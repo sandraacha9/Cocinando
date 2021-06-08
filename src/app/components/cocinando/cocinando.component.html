@@ -1,0 +1,53 @@
+<div class="app-main app-cocinando" [ngClass]="{'app-hidden-category-header': hiddenCategoryHeader, 'app-show-search': showSearch, 'app-route-is-cart': routeIsCart}">
+
+  <div class="app-main-content">
+    <div class="app-main-header hidden-xs hidden-sm">
+      <div class="app-main-header-row flex-md-row flex-md-h-between flex-lg-row flex-lg-h-between">
+        <div>
+        </div>
+        <div>
+          <app-user-cart *ngIf="isRegistered()"></app-user-cart>
+          <app-language class="app-main-header-child"></app-language>
+          <app-user-logout></app-user-logout>
+        </div>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+    <div class="app-main-footer position-xs-absolute position-xs-bottom position-sm-absolute position-sm-bottom position-md-absolute position-md-bottom position-lg-absolute position-lg-bottom">
+      <div class="app-main-footer-content">
+        <app-footer></app-footer>
+      </div>
+    </div>
+
+    <app-header-phone class="hidden-md hidden-lg"></app-header-phone>
+    <div class="app-sidebar-backdrop" [ngClass]="{'app-sidebar-show': sidebarShow}" (click)="hideSidebar()"></div>
+    <div class="app-sidebar" [ngClass]="{'app-sidebar-show': sidebarShow}">
+      <ul class="nav nav-pills nav-stacked app-nav-sidebar">
+        <li class="app-nav-sidebar-item app-nav-sidebar-item-close text-right hidden-md hidden-lg">
+          <a class="app-nav-sidebar-item-link" (click)="hideSidebar()">{{'general.close' | translate}}
+            <span class="app-icon app-icon-x-close"></span>
+          </a>
+        </li>
+        <li class="app-nav-sidebar-item app-nav-sidebar-item-logo hidden-xs hidden-sm">
+          <div class="app-logo">
+            <img #logo tabIndex="0" class="app-logo-image" src='./assets/images/Logo.png' />
+          </div>
+        </li>
+        <li class="app-nav-sidebar-item app-nav-sidebar-item-action app-nav-sidebar-item-action-language hidden-md hidden-lg">
+          <app-language class="color-gr"></app-language>
+        </li>
+        <li class="app-nav-sidebar-item app-nav-sidebar-item-action app-nav-sidebar-item-action-logout hidden-md hidden-lg">
+            <app-user-logout></app-user-logout>
+        </li>
+      </ul>
+      <div class="app-sidebar-main" *ngIf="!isPrivate()">
+        <app-category-selector (selectCategoryEvent)="onSelectCategory()"></app-category-selector>
+      </div>
+      <div class="app-sidebar-main app-sidebar-main-private" *ngIf="isPrivate()">
+        <app-private-zone-list></app-private-zone-list>
+      </div>
+    </div>
+  </div>
+</div>

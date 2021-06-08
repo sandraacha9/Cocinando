@@ -1,0 +1,109 @@
+@import 'src/scss/custom_bootstrap.scss';
+@import 'src/scss/palette.scss';
+
+:host {
+  display: block;
+
+  &.app-modal-mini-cart-list {
+    border: 0;
+    top: 55px;
+    list-style: none;
+
+    .app-mini-cart-list-item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-bottom: 2px;
+      }
+
+      a {
+        display: block;
+        color: inherit;
+        &:hover,
+        &:focus {
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .app-mini-cart-list-summary {
+      margin-top: 30px;
+      margin-bottom: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.2857rem;
+      font-weight: bold;
+      .app-mini-cart-list-summary-price {
+        color: $color_b;
+      }
+    }
+    .app-mini-cart-list-go-cart {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &.app-user-cart-list {
+    border: 0;
+    top: 55px;
+
+    .app-mini-cart-list-item {
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        display: block;
+        color: inherit;
+        &:hover,
+        &:focus {
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .app-mini-cart-list-summary {
+      margin-top: 30px;
+      margin-bottom: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.2857rem;
+      font-weight: bold;
+      .app-mini-cart-list-summary-price {
+        color: $color_b;
+      }
+    }
+    .app-mini-cart-list-go-cart {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .app-mini-cart-products {
+      width: 241px;
+    }
+  }
+}
+
+.app-mini-cart-products {
+  position: relative;
+  &.app-mini-cart-products-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 5px;
+  }
+}
+
+@media #{$widthXSlandscape}, #{$widthSMlandscape} {
+  .app-mini-cart-products {
+    &.app-mini-cart-products-scroll {
+      max-height: 175px;
+    }
+  }
+}
+

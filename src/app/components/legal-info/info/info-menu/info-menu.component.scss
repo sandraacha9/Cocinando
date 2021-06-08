@@ -1,0 +1,41 @@
+@import "src/scss/palette.scss";
+@import 'src/scss/custom_bootstrap.scss';
+
+.item {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  &.sub-item {
+    padding-left: 10px;
+  }
+  &.sub-sub-item {
+    padding-left: 15px;
+  }
+}
+
+@media #{$widthLG}, #{$widthMD} {
+  .item {
+    font-weight: bold;
+    &.item-active,
+    &:hover {
+      a {
+        color: $color_b;
+      }
+    }
+    a {
+      color: #000;
+    }
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  &.item-active {
+    a{
+      font-weight: bold;
+      color: $color_w;
+    }
+  }
+  a {
+    color: $color_b1;
+  }
+}

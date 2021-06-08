@@ -1,0 +1,78 @@
+@import 'src/scss/palette.scss';
+@import 'src/scss/custom_bootstrap.scss';
+
+:host {
+  display: block;
+}
+
+.app-main:not(.app-hidden-category-header) .app-main-content {
+  padding-top: 60px;
+}
+
+.app-sidebar {
+  .app-logo {
+    display: block;
+    margin: 0 auto 40px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    .app-logo-image {
+      width: 100%;
+    }
+  }
+}
+
+.app-error-page-content {
+  display: block;
+  width: 75%;
+  max-width: 650px;
+
+  margin: 50px auto 0 auto;
+  padding: 15px;
+  border: 1px solid $color_k1;
+  border-radius: 15px;
+
+  text-align: center;
+
+  .app-error-page-title {
+    font-size: 2.1428rem;
+    margin-bottom: 25px;
+  }
+
+  .app-error-page-message {
+    font-size: 1.7142rem;
+    margin-bottom: 25px;
+  }
+}
+
+@media #{$widthXS}, #{$widthSM} {
+  .app-sidebar {
+    padding: 5px 15px 0 15px;
+  }
+
+  .navbar-nav {
+    .language {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+@media #{$widthMD}, #{$widthLG} {
+  .app-sidebar {
+    padding: 25px 0 25px 0;
+  }
+}
+
+
+@media #{$widthXS} {
+  .app-main-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .app-error-page-content {
+    width: 100%;
+    margin-top: 25px;
+    max-width: none;
+  }
+}

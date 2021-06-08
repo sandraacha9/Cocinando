@@ -1,0 +1,77 @@
+.app-selector {
+  &:not(.open) {
+    .app-selector-icon-up {
+      display: none;
+    }
+  }
+  &.open {
+    .app-selector-icon-down {
+      display: none;
+    }
+  }
+
+  & > .btn {
+    &:focus {
+      outline: 0;
+    }
+    .app-selector-icon-down {
+      padding-left: 5px;
+      font-size: 0.7142rem;
+    }
+    .app-selector-icon-up {
+      padding-left: 5px;
+      font-size: 0.7142rem;
+    }
+  }
+
+  & > .btn,
+  &.open > .btn {
+    @extend .app-btn-transparent;
+    box-shadow: none;
+  }
+
+
+}
+
+
+.app-selector-list {
+  list-style: none;
+
+  margin-top: 10px;
+  padding: 0px;
+  box-shadow: $box_shadow;
+  background-color: $color_w;
+  width: 100%;
+  border-radius: 5px;
+  border: none !important;
+  overflow: hidden;
+  .app-selector-list-item {
+    background-color: $color_w;
+
+    .app-selector-list-item-link {
+      padding: 5px 20px 5px 20px;
+      display: block;
+      clear: both;
+      font-weight: normal;
+      line-height: 1.42857143;
+      color: #333333;
+      //white-space: nowrap;
+      text-decoration: none;
+      &:hover {
+        background-color: $color_gr2;
+        color: $color_k;
+      }
+    }
+  }
+}
+
+.modal-dialog {
+  .app-selector-list {
+    box-shadow: none;
+  }
+}
+
+.ul-sin-padding {
+  padding: 3px;
+  margin: 0;
+}

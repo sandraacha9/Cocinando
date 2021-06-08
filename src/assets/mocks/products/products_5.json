@@ -1,0 +1,32 @@
+{
+  "data": [
+      {
+          "productId": 18,
+          "title": "TARTA DE QUESO MASCARPONE",
+          "price": 4.10,
+          "url": "./assets/images/mascarpone.jpg",
+          "category": 5
+      },
+      {
+          "productId": 19,
+          "title": "BROWNIE DE CHOCOLATE Y FRUTOS SECOS",
+          "price": 4.10,
+          "url": "./assets/images/brownie.jpg",
+          "category": 5
+      },
+      {
+          "productId": 20,
+          "title": "COPA DE LIMÓN",
+          "price": 3.50,
+          "url": "./assets/images/copalimon.jpg",
+          "category": 5
+      },
+      {
+          "productId": 21,
+          "title": "COPA DE CHOCOLATE Y FRUTOS SECOS",
+          "price": 4.00,
+          "url": "./assets/images/copachocolate.jpg",
+          "category": 5
+      }
+  ]
+}

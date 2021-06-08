@@ -1,0 +1,65 @@
+*:focus {
+  outline: 0 !important;
+}
+
+/* Change the white to any color ;) */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+/* firefox 19+ */
+
+input:-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+.app-cursor-icon {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.ps__rail-x:hover,
+.ps__rail-y:hover,
+.ps__rail-x:focus,
+.ps__rail-y:focus {
+  background-color: transparent;
+}
+
+.la-ball-clip-rotate-multiple.la-3x {
+  position: absolute;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0;
+  width: 100vw !important;
+  bottom: 0;
+  margin: auto;
+  height: 100vh !important;
+}

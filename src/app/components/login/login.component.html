@@ -1,0 +1,33 @@
+<div class="app-login-auth-container"></div>
+
+<div *ngIf="isLoadPage" class="app-login-content">
+    <!-- login-form element -->
+    <div class="app-login-content-inner">
+        <div class="app-login-form">
+            <app-login-form></app-login-form>
+        </div>
+    </div>
+
+    <div class="app-login-language hidden-xs hidden-sm">
+        <app-language class="app-login-child"></app-language>
+    </div>
+</div>
+
+<div *ngIf="isLoadPage" class="app-header-phone hidden-md hidden-lg">
+  <div class="container">
+    <div class="navbar app-navbar-header-phone">
+      <ul class="nav navbar-nav">
+        <li class="navbar-item navbar-item-logo float-left">
+          <div class="app-logo">
+            <img #logo tabIndex="0" class="app-logo-image" src='./assets/images/Logo.png' />
+          </div>
+        </li>
+        <li class="navbar-item pull-right">
+          <div class="language">
+            <app-language class="app-header-phone-child"></app-language>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
